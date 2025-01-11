@@ -1,113 +1,162 @@
-/* General Styles */
-body {
+/* General Reset */
+* {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #007bff, #28a745, #dc3545);
-    background-size: 100% 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  /* Container for forms or cards */
-  .card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #263238;
   }
   
-  /* Form Heading */
-  .card h1 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #222;
-  }
-  
-  /* Input Fields */
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-  }
-  
-  /* Radio Buttons */
-  .radio-group {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 1rem;
-  }
-  
-  .radio-group label {
-    font-size: 0.9rem;
-    cursor: pointer;
-  }
-  
-  /* Buttons */
-  button {
-    background: #007bff;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
-  /* Links */
-  a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Navbar */
-  .navbar {
-    width: 100%;
-    background: white;
-    padding: 10px 20px;
+  /* Header */
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .navbar a {
-    color: #333;
-    margin-left: 15px;
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1773DA;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #263238;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .nav-link.active {
+    color: #1773DA;
+  }
+  
+  .nav-link.signup {
+    padding: 8px 16px;
+    background-color: #1773DA;
+    color: #fff;
+    border-radius: 20px;
     font-weight: bold;
   }
   
-  .navbar button {
-    background: #28a745;
-    color: white;
+  /* Main Content */
+  .main {
+    padding: 40px;
+  }
+  
+  .opportunity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .opportunity-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .opportunity-card.blue {
+    border-left: 8px solid #1773DA;
+  }
+  
+  .opportunity-card.red {
+    border-left: 8px solid #F07167;
+  }
+  
+  .opportunity-card.green {
+    border-left: 8px solid #00FFB2;
+  }
+  
+  .info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #263238;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .text-block {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .details {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    background-color: #1773DA;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #1773DA;
   }
   
   /* Footer */
-  footer {
+  .footer {
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #1773DA;
+    color: #fff;
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.8rem;
-    color: #555;
+    border-radius: 20px 20px 0 0;
   }
   
+  .footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .footer-text {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  
+  .footer-rights {
+    font-size: 12px;
+    color: #e5e5e5;
+  }

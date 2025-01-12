@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account - Step 2</title>
+</head>
+<body>
+    <div class="SignUp2-container">
+        <h1>Create an Account</h1>
+        <p>Create a account to continue</p>
+
+        <div class="progress-bar">
+            <div class="step">Step 1</div>
+            <div class="step active">Step 2</div>
+            <div class="step">Step 3</div>
+        </div>
+
+        <form>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+966" required> 
+
+            <label for="national-id">National ID / Residence number:</label>
+            <input type="text" id="national-id" name="national-id" placeholder="ID number" required>
+
+            <label for="birth-date">Birth date:</label>
+            <input type="date" id="birth-date" name="birth-date" required>
+
+            <label for="gender">Gender:</label>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <button type="submit">Next Step</button>
+        </form>
+
+        <p>Already have an account? <a href="#">Login</a></p>
+    </div>
+</body>
+</html>

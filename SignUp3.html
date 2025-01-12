@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account - Step 3</title>
+</head>
+<body>
+    <div class="SignUp3-container">
+        <h1>Create an Account</h1>
+        <p>Create a account to continue</p>
+
+        <div class="progress-bar">
+            <div class="step">Step 1</div>
+            <div class="step">Step 2</div>
+            <div class="step active">Step 3</div>
+        </div>
+
+        <form>
+            <label for="education">Educational Qualification:</label>
+            <select id="education" name="education">
+                <option value="">Select</option>
+                <option value="highschool">High School</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">PhD</option>
+            </select>
+
+            <label for="skills">Technical Skills:</label>
+            <select id="skills" name="skills[]" multiple>
+                <option value="programming">Programming</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>
+                <option value="data-analysis">Data Analysis</option>
+            </select>
+
+            <label for="volunteering">Do you have previous volunteering experience?</label>
+            <div class="radio-group">
+                <input type="radio" id="yes" name="volunteering" value="yes">
+                <label for="yes">Yes, I have</label>
+                <input type="radio" id="no" name="volunteering" value="no">
+                <label for="no">No</label>
+            </div>
+
+            <button type="submit">Create an Account</button>
+        </form>
+
+        <p>Already have an account? <a href="#">Login</a></p>
+    </div>
+</body>
+</html>

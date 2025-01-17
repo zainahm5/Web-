@@ -2,21 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <title>Opportunities Page</title>
-    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <header class="header">
-        <div class="logo">LOGO</div>
-        <nav class="navbar">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link active">Opportunities</a>
-            <a href="#" class="nav-link">Achievements</a>
-            <a href="#" class="nav-link">Account</a>
-            <a href="#" class="nav-link login">Login</a>
-            <a href="#" class="nav-link signup">Sign Up</a>
-        </nav>
+    <!-- HEADER -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">LOGO</a></div>
+            <ul class="links">
+                <li><a href="">Home</a></li>
+                <li><a href="">Opportunities</a></li>
+                <li><a href="">Account</a></li>
+            </ul>
+            <div>
+                <a href="" class="login">Login</a>
+                <a href="" class="signup_btn">Sign Up</a>
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Opportunities</a></li>
+            <li><a href="">Account</a></li>
+            <li><a href="" class="login">Login</a></li>
+            <li><a href="" class="signup_btn">Sign Up</a></li>
+        </div>
     </header>
 
     <main class="main">
@@ -58,10 +80,26 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-logo">LOGO</div>
-        <div class="footer-text">Some footer text here.</div>
-        <div class="footer-rights">© 2025 All Rights Reserved</div>
+    <!-- FOOTER -->
+    <footer>
+        <h4>LOGO</h4>
+        <P>hfgjkfl</P>
+        <p>&copy; 2025, All Rights Reserved</p>
     </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>

@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an Account - Step 2</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Sign Up - Step 2</title>
 </head>
 <body>
-    <div class="SignUp2-container">
-        <h1>Create an Account</h1>
-        <p>Create a account to continue</p>
-
-        <div class="progress-bar">
-            <div class="step">Step 1</div>
-            <div class="step active">Step 2</div>
-            <div class="step">Step 3</div>
+    <div class="sign-container">
+        <div class="sign-background"></div>
+        <div class="sign-card">
+            <h2 class="sign-heading">Create an Account - Step 2</h2>
+            <p class="sign-subheading">Create an account to continue</p>
+            <form class="form">
+                <div class="form-group">
+                    <label for="phone">Phone number:</label>
+                    <input type="text" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="national_id">National ID / Residence number:</label>
+                    <input type="text" id="national_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Birth date:</label>
+                    <input type="date" id="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <button type="submit" class="sign-btn">Next Step</button>
+            </form>
+            <p class="login-signup-text">
+                Already have an account? <a href="#" class="login-signup-link">Login</a>
+            </p>
         </div>
-
-        <form>
-            <label for="phone">Phone number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="+966" required> 
-
-            <label for="national-id">National ID / Residence number:</label>
-            <input type="text" id="national-id" name="national-id" placeholder="ID number" required>
-
-            <label for="birth-date">Birth date:</label>
-            <input type="date" id="birth-date" name="birth-date" required>
-
-            <label for="gender">Gender:</label>
-            <div class="gender-options">
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-            </div>
-
-            <button type="submit">Next Step</button>
-        </form>
-
-        <p>Already have an account? <a href="#">Login</a></p>
     </div>
 </body>
 </html>

@@ -2,51 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an Account - Step 3</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+    <title>Sign Up - Step 3</title>
 </head>
 <body>
-    <div class="SignUp3-container">
-        <h1>Create an Account</h1>
-        <p>Create a account to continue</p>
-
-        <div class="progress-bar">
-            <div class="step">Step 1</div>
-            <div class="step">Step 2</div>
-            <div class="step active">Step 3</div>
+    <div class="sign-container">
+        <div class="sign-background"></div>
+        <div class="sign-card">
+            <h2 class="sign-heading">Create an Account - Step 3</h2>
+            <p class="sign-subheading">Create an account to continue</p>
+            <form class="form">
+                <div class="form-group">
+                    <label for="edu_qualification">Educational Qualification:</label>
+                    <select id="edu_qualification" required>
+                        <option value="select">Select</option>
+                        <option value="high_school">High School</option>
+                        <option value="bachelors_degree">Bachelor's Degree</option>
+                        <option value="masters_degree">Master's Degree</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Technical Skills:</label>
+                    <div>
+                        <input type="checkbox" id="programming" name="programming">
+                        <label for="programming">Programming</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="design" name="design">
+                        <label for="design">Design</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="marketing" name="marketing">
+                        <label for="marketing">Marketing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="data_analysis" name="data_analysis">
+                        <label for="data_analysis">Data Analysis</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="volunteering_exp">Do you have previous volunteering experience?</label>
+                    <select id="volunteering_exp" required>
+                        <option value="yes">Yes, I have</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <button type="submit" class="sign-btn">Create an Account</button>
+            </form>
+            <p class="login-signup-text">
+                Already have an account? <a href="#" class="login-signup-link">Login</a>
+            </p>
         </div>
-
-        <form>
-            <label for="education">Educational Qualification:</label>
-            <select id="education" name="education">
-                <option value="">Select</option>
-                <option value="highschool">High School</option>
-                <option value="bachelor">Bachelor's Degree</option>
-                <option value="master">Master's Degree</option>
-                <option value="phd">PhD</option>
-            </select>
-
-            <label for="skills">Technical Skills:</label>
-            <select id="skills" name="skills[]" multiple>
-                <option value="programming">Programming</option>
-                <option value="design">Design</option>
-                <option value="marketing">Marketing</option>
-                <option value="data-analysis">Data Analysis</option>
-            </select>
-
-            <label for="volunteering">Do you have previous volunteering experience?</label>
-            <div class="radio-group">
-                <input type="radio" id="yes" name="volunteering" value="yes">
-                <label for="yes">Yes, I have</label>
-                <input type="radio" id="no" name="volunteering" value="no">
-                <label for="no">No</label>
-            </div>
-
-            <button type="submit">Create an Account</button>
-        </form>
-
-        <p>Already have an account? <a href="#">Login</a></p>
     </div>
 </body>
 </html>

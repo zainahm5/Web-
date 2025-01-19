@@ -2,39 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an Account - Step 1</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Sign Up - Step 1</title>
 </head>
 <body>
-    <div class="SignUp1-container">
-            <h1>Create an Account</h1>
-            <p>Create a account to continue</p>
-
-            <div class="progress-bar">
-                <div class="step active">Step 1</div>
-                <div class="step">Step 2</div>
-                <div class="step">Step 3</div>
-            </div>
-
-            <form>
-                <label for="email">Email address:</label>
-                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Username" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="confirm-password">Confirm password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-
-                <button type="submit">Next Step</button>
+    <div class="sign-container">
+        <div class="sign-background"></div>
+        <div class="sign-card">
+            <h2 class="sign-heading">Create an Account - Step 1</h2>
+            <p class="sign-subheading">Create an account to continue</p>
+            <form class="form">
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" required placeholder="example@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm password:</label>
+                    <input type="password" id="confirm_password" required>
+                </div>
+                <button type="submit" class="sign-btn">Next Step</button>
             </form>
-
-            <button type="button">Sign up with Google</button>
-            <p>Already have an account? <a href="#">Login</a></p>
+            <p class="login-signup-text">
+                Already have an account? <a href="#" class="login-signup-link">Login</a>
+            </p>
+        </div>
     </div>
 </body>
 </html>

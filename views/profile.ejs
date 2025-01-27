@@ -4,101 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="<%= stylePath %>" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <title>Account</title>
+    <title><%= title %></title>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#">LOGO</a></div>
+            <div class="logo"><a href="<%= home %>"><%= logo %></a></div>
             <ul class="links">
-                <li><a href="">Home</a></li>
-                <li><a href="">Opportunities</a></li>
-                <li><a href="">Account</a></li>
+                <li><a href="<%= home %>">Home</a></li>
+                <li><a href="<%= opportunities %>">Opportunities</a></li>
+                <li><a href="<%= account %>">Account</a></li>
             </ul>
             <div>
-                <a href="" class="login">Login</a>
-                <a href="" class="signup_btn">Sign Up</a>
+                <a href="<%= login %>" class="login">Login</a>
+                <a href="<%= signup %>" class="signup_btn">Sign Up</a>
             </div>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            
+
         </div>
         <div class="dropdown_menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Opportunities</a></li>
-            <li><a href="">Account</a></li>
-            <li><a href="" class="login">Login</a></li>
-            <li><a href="" class="signup_btn">Sign Up</a></li>
+            <li><a href="<%= home %>">Home</a></li>
+            <li><a href="<%= opportunities %>">Opportunities</a></li>
+            <li><a href="<%= account %>">Account</a></li>
+            <li><a href="<%= login %>" class="login">Login</a></li>
+            <li><a href="<%= signup %>" class="signup_btn">Sign Up</a></li>
         </div>
     </header>
 
-    <main class="main">
-        <h2>Your Profile</h2>
-        <div class="profile-section">
-            <img src="profile-image.jpg" alt="Profile" class="profile-image"> <!-- استبدل بالصورة الفعلية -->
-            <div class="profile-info">
-                <div class="info-item">
-                    <label for="full-name">Full Name:</label>
-                    <input type="text" id="full-name" value="Alexa Rawles">
-                </div>
-                <div class="info-item">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" value="alexa.rawles@gmail.com">
-                </div>
-                <div class="info-item">
-                    <label for="birth-date">Birth Date:</label>
-                    <input type="date" id="birth-date">
-                </div>
-                <div class="info-item">
-                    <label for="gender">Gender:</label>
-                    <select id="gender">
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="info-item">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" value="+966xxxxxxx">
-                </div>
-            </div>
-        </div>
-
-        <div class="volunteering-section">
-            <h3>You have <span class="volunteer-hours">21</span> Volunteer Hours</h3>
-            <div class="skills-section">
-                <h4>My Skills</h4>
-                <input type="text" placeholder="Add Skill" class="skill-input">
-                <button class="btn">+ Add Skills</button>
-            </div>
-            <div class="history-section">
-                <h4>Volunteering History</h4>
-                <div class="opportunity-card">
-                    <div class="title">Opportunity 1 Title</div>
-                    <div class="description">Description of opportunity 1.</div>
-                </div>
-                <div class="opportunity-card">
-                    <div class="title">Opportunity 2 Title</div>
-                    <div class="description">Description of opportunity 2.</div>
+    <!-- PROFILE CONTENT -->
+    <main>
+        <section id="profile">
+            <h2><%= profileTitle %></h2>
+            <div class="profile-section">
+                <img src="<%= profileImage %>" alt="Profile" class="profile-image">
+                <div class="profile-info">
+                    <div class="info-item">
+                        <label for="full-name"><%= fullNameLabel %>:</label>
+                        <input type="text" id="full-name" value="<%= userFullName %>">
+                    </div>
+                    <div class="info-item">
+                        <label for="email"><%= emailLabel %>:</label>
+                        <input type="email" id="email" value="<%= userEmail %>">
+                    </div>
+                    <div class="info-item">
+                        <label for="birth-date"><%= birthDateLabel %>:</label>
+                        <input type="date" id="birth-date" value="<%= userBirthDate %>">
+                    </div>
+                    <div class="info-item">
+                        <label for="gender"><%= genderLabel %>:</label>
+                        <select id="gender">
+                            <option value="female" <%= userGender === 'female' ? 'selected' : '' %>>Female</option>
+                            <option value="male" <%= userGender === 'male' ? 'selected' : '' %>>Male</option>
+                            <option value="other" <%= userGender === 'other' ? 'selected' : '' %>>Other</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
+            <button type="submit" class="update-btn"><%= updateButton %></button>
+        </section>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <h4>LOGO</h4>
-        <P>hfgjkfl</P>
-        <p>&copy; 2025, All Rights Reserved</p>
+        <p>&copy; <%= currentYear %>, All Rights Reserved</p>
     </footer>
 
     <script>

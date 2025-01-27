@@ -5,38 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <title>Login to Account</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title><%= title %></title>
 </head>
 <body>
     <div class="sign-container">
         <div class="sign-background"></div>
         <div class="sign-card">
-            <h2 class="sign-heading">Login to Your Account</h2>
-            <p class="sign-subheading">Please enter your email and password to continue</p>
+            <h2 class="sign-heading"><%= loginTitle %></h2>
+            <p class="sign-subheading"><%= loginSubtitle %></p>
             <form class="form">
                 <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" id="email" required placeholder="example@gmail.com">
+                    <label for="email"><%= emailLabel %>:</label>
+                    <input type="email" id="email" required placeholder="<%= emailPlaceholder %>">
                 </div>
                 <div class="form-group">
-                    <label for="password">Password:</label>
+                    <label for="password"><%= passwordLabel %>:</label>
                     <input type="password" id="password" required>
                 </div>
-                <button type="submit" class="sign-btn">Sign In</button>
+                <button type="submit" class="sign-btn"><%= signInButton %></button>
             </form>
             <p class="login-signup-text">
-                Don't have an account? <a href="#" class="login-signup-link">Sign Up</a>
+                <%= dontHaveAccountText %> <a href="<%= signupLink %>" class="login-signup-link"><%= signupLinkText %></a>
             </p>
             <p class="login-signup-text">
-                Forgot Password? <a href="#" class="login-signup-link">Reset it</a>
+                <%= forgotPasswordText %> <a href="<%= resetPasswordLink %>" class="login-signup-link"><%= resetPasswordText %></a>
             </p>
         </div>
     </div>
+    
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>

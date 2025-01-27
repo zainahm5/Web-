@@ -4,47 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <title>Sign Up - Step 2</title>
+    <title><%= title %></title>
 </head>
 <body>
     <div class="sign-container">
         <div class="sign-background"></div>
         <div class="sign-card">
-            <h2 class="sign-heading">Create an Account - Step 2</h2>
-            <p class="sign-subheading">Create an account to continue</p>
+            <h2 class="sign-heading"><%= signup2Title %></h2>
+            <p class="sign-subheading"><%= signup2Subheading %></p>
             <form class="form">
                 <div class="form-group">
-                    <label for="phone">Phone number:</label>
-                    <input type="text" id="phone" required>
+                    <label for="phone"><%= phoneLabel %>:</label>
+                    <input type="text" id="phone" required placeholder="<%= phonePlaceholder %>">
                 </div>
                 <div class="form-group">
-                    <label for="national_id">National ID / Residence number:</label>
-                    <input type="text" id="national_id" required>
+                    <label for="address"><%= addressLabel %>:</label>
+                    <input type="text" id="address" required placeholder="<%= addressPlaceholder %>">
                 </div>
                 <div class="form-group">
-                    <label for="birthdate">Birth date:</label>
-                    <input type="date" id="birthdate" required>
+                    <label for="city"><%= cityLabel %>:</label>
+                    <input type="text" id="city" required placeholder="<%= cityPlaceholder %>">
                 </div>
                 <div class="form-group">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
+                    <label for="country"><%= countryLabel %>:</label>
+                    <input type="text" id="country" required placeholder="<%= countryPlaceholder %>">
                 </div>
-                <button type="submit" class="sign-btn">Next Step</button>
+                <button type="submit" class="sign-btn"><%= nextButton %></button>
             </form>
             <p class="login-signup-text">
-                Already have an account? <a href="#" class="login-signup-link">Login</a>
+                <%= alreadyHaveAccountText %> <a href="<%= loginLink %>" class="login-signup-link"><%= loginText %></a>
             </p>
         </div>
     </div>
+    
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>

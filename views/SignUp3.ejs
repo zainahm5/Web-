@@ -4,64 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-    <title>Sign Up - Step 3</title>
+    
+    <title><%= title %></title>
 </head>
 <body>
     <div class="sign-container">
         <div class="sign-background"></div>
         <div class="sign-card">
-            <h2 class="sign-heading">Create an Account - Step 3</h2>
-            <p class="sign-subheading">Create an account to continue</p>
+            <h2 class="sign-heading"><%= signup3Title %></h2>
+            <p class="sign-subheading"><%= signup3Subheading %></p>
             <form class="form">
                 <div class="form-group">
-                    <label for="edu_qualification">Educational Qualification:</label>
+                    <label for="edu_qualification"><%= eduQualificationLabel %>:</label>
                     <select id="edu_qualification" required>
-                        <option value="select">Select</option>
-                        <option value="high_school">High School</option>
-                        <option value="bachelors_degree">Bachelor's Degree</option>
-                        <option value="masters_degree">Master's Degree</option>
-                        <option value="phd">PhD</option>
+                        <option value="select"><%= selectOption %></option>
+                        <option value="high_school"><%= highSchool %></option>
+                        <option value="bachelors_degree"><%= bachelorsDegree %></option>
+                        <option value="masters_degree"><%= mastersDegree %></option>
+                        <option value="phd"><%= phd %></option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Technical Skills:</label>
+                    <label><%= technicalSkillsLabel %>:</label>
                     <div>
                         <input type="checkbox" id="programming" name="programming">
-                        <label for="programming">Programming</label>
+                        <label for="programming"><%= programming %></label>
                     </div>
                     <div>
                         <input type="checkbox" id="design" name="design">
-                        <label for="design">Design</label>
+                        <label for="design"><%= design %></label>
                     </div>
                     <div>
                         <input type="checkbox" id="marketing" name="marketing">
-                        <label for="marketing">Marketing</label>
+                        <label for="marketing"><%= marketing %></label>
                     </div>
                     <div>
                         <input type="checkbox" id="data_analysis" name="data_analysis">
-                        <label for="data_analysis">Data Analysis</label>
+                        <label for="data_analysis"><%= dataAnalysis %></label>
                     </div>
+
                 </div>
                 <div class="form-group">
-                    <label for="volunteering_exp">Do you have previous volunteering experience?</label>
+                    <label for="volunteering_exp"><%= volunteeringExperienceLabel %></label>
                     <select id="volunteering_exp" required>
-                        <option value="yes">Yes, I have</option>
-                        <option value="no">No</option>
+                        <option value="yes"><%= yes %></option>
+                        <option value="no"><%= no %></option>
                     </select>
                 </div>
-                <button type="submit" class="sign-btn">Create an Account</button>
+                <button type="submit" class="sign-btn"><%= createAccountButton %></button>
             </form>
             <p class="login-signup-text">
-                Already have an account? <a href="#" class="login-signup-link">Login</a>
+                <%= alreadyHaveAccountText %> <a href="<%= loginLink %>" class="login-signup-link"><%= loginText %></a>
             </p>
         </div>
     </div>
+    
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>

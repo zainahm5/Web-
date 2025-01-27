@@ -4,7 +4,8 @@
   "description": "This Web Group project aims to create a volunteering website to link volunteers with seasonal events.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node app.js"
   },
   "repository": {
     "type": "git",

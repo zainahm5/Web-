@@ -56,7 +56,7 @@
 
             <div class="row">
                 <% features.forEach(function(feature) { %>
-                    <div class="col" style="background: <%= feature.color %>;">
+                    <div class="col" style="background: <%- feature.color %>">
                         <h3><%= feature.name %></h3>
                     </div>
                 <% }); %>

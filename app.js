@@ -8,18 +8,23 @@ const port = 3000 || process.env.PORT;
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-//static folder
-app.use(express.static('public'));
+//static folderse(express.static('public'));
 
 //Templating Engine
 app.use(expressLayouts);
 app.set('layouyt', './layouts/main');
 app.set('view engine', 'ejs');
 
-app.get('/' , function(req, res){
-    res.render('index', { title: "Home Page" });
-})
+//Routes 
+app.use('/', require('./server/routes/index'))
+app.get('/', function(req, res){
+    const locals = {
+        title: 'EventServe',
+        descreption: 'Volunteering hub for seasonal events'
+    }
+    res.render('index',locals);
+});
 
-app.listen(port, ()=>{
+app.listen(port, ()=> {
     console.log(`App listening on port ${port}`);
 })

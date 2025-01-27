@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Opportunities Page</title>
+    <title><%= title %></title>
 </head>
 <body>
     <!-- HEADER -->
@@ -30,7 +30,6 @@
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            
         </div>
         <div class="dropdown_menu">
             <li><a href="">Home</a></li>
@@ -50,56 +49,37 @@
         </div>
         
         <div class="opportunity-list">
-            <div class="opportunity-card blue">
-                <div class="info">
-                    <div class="text-block">
-                        <div class="title">Opportunity 1 Title</div>
-                        <div class="subtitle">Opportunity 1 Description</div>
+            <% opportunities.forEach(opportunity => { %>
+                <div class="opportunity-card <%= opportunity.color %>">
+                    <div class="info">
+                        <div class="text-block">
+                            <div class="title"><%= opportunity.title %></div>
+                            <div class="subtitle"><%= opportunity.description %></div>
+                        </div>
                     </div>
+                    <button class="btn">View Details</button>
                 </div>
-                <button class="btn">View Details</button>
-            </div>
-            <div class="opportunity-card red">
-                <div class="info">
-                    <div class="text-block">
-                        <div class="title">Opportunity 2 Title</div>
-                        <div class="subtitle">Opportunity 2 Description</div>
-                    </div>
-                </div>
-                <button class="btn">View Details</button>
-            </div>
-            <div class="opportunity-card green">
-                <div class="info">
-                    <div class="text-block">
-                        <div class="title">Opportunity 3 Title</div>
-                        <div class="subtitle">Opportunity 3 Description</div>
-                    </div>
-                </div>
-                <button class="btn">View Details</button>
-            </div>
+            <% }) %>
         </div>
     </main>
 
     <!-- FOOTER -->
     <footer>
         <h4>LOGO</h4>
-        <P>hfgjkfl</P>
         <p>&copy; 2025, All Rights Reserved</p>
     </footer>
 
     <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
 
         toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
 
-            toggleBtnIcon.classList = isOpen
-              ? 'fa-solid fa-xmark'
-              : 'fa-solid fa-bars'
-        }
+            toggleBtnIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        };
     </script>
 </body>
 </html>

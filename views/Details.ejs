@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <title>Opportunity Details</title>
+    <title><%= title %></title>
 </head>
 <body>
     <!-- HEADER -->
@@ -30,7 +30,6 @@
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            
         </div>
         <div class="dropdown_menu">
             <li><a href="#">Home</a></li>
@@ -42,25 +41,25 @@
     </header>
 
     <main class="main">
-        <h1>[Opportunity Title]</h1>
-        <p>[Opportunity Description]</p>
+        <h1><%= opportunityTitle %></h1>
+        <p><%= opportunityDescription %></p>
 
         <div class="Details-container">
             <div class="detail-item">
                 <span class="detail-label">Location:</span>
-                <span class="detail-value">[Location]</span>
+                <span class="detail-value"><%= location %></span>
             </div>
             <div class="detail-item">
                 <span class="detail-label">Date:</span>
-                <span class="detail-value">[Date]</span>
+                <span class="detail-value"><%= date %></span>
             </div>
             <div class="detail-item">
                 <span class="detail-label">Time:</span>
-                <span class="detail-value">[Time]</span>
+                <span class="detail-value"><%= time %></span>
             </div>
             <div class="detail-item">
                 <span class="detail-label">Organization:</span>
-                <span class="detail-value">[Organization Name]</span>
+                <span class="detail-value"><%= organization %></span>
             </div>
         </div>
 
@@ -70,7 +69,6 @@
     <!-- FOOTER -->
     <footer>
         <h4>LOGO</h4>
-        <P>hfgjkfl</P>
         <p>&copy; 2025, All Rights Reserved</p>
     </footer>
 

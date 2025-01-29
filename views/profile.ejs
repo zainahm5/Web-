@@ -1,0 +1,55 @@
+<!-- this is the body of Profile -->
+<div class="container-fluid container-fluid-custom">
+    <main class="main">
+        <h2>Your Profile</h2>
+        <div class="profile-section">
+            <img src="profile-image.jpg" alt="Profile" class="profile-image"> <!-- استبدل بالصورة الفعلية -->
+            <div class="profile-info">
+                <div class="info-item">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" value="Alexa Rawles">
+                </div>
+                <div class="info-item">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" value="alexa.rawles@gmail.com">
+                </div>
+                <div class="info-item">
+                    <label for="birth-date">Birth Date:</label>
+                    <input type="date" id="birth-date">
+                </div>
+                <div class="info-item">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="info-item">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" value="+966xxxxxxx">
+                </div>
+            </div>
+        </div>
+
+        <div class="volunteering-section">
+            <h3>You have <span class="volunteer-hours">21</span> Volunteer Hours</h3>
+            <div class="skills-section">
+                <h4>My Skills</h4>
+                <input type="text" placeholder="Add Skill" class="skill-input">
+                <button class="btn">+ Add Skills</button>
+            </div>
+            <div class="history-section">
+                <h4>Volunteering History</h4>
+                <div class="opportunity-card">
+                    <div class="title">Opportunity 1 Title</div>
+                    <div class="description">Description of opportunity 1.</div>
+                </div>
+                <div class="opportunity-card">
+                    <div class="title">Opportunity 2 Title</div>
+                    <div class="description">Description of opportunity 2.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "This Web Group project aims to create a volunteering website to link volunteers with seasonal events.",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-mongo": "^5.1.0",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
@@ -20,7 +21,8 @@
     "method-override": "^3.0.0",
     "mongoose": "^8.9.5",
     "passport": "^0.7.0",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

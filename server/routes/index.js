@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const mainController = require('../controllers/mainController');
+//const authRoutes = require('./auth');
+
+//router.use('/auth', authRoutes);
 
 // App Routes
 router.get('/', mainController.homepage);

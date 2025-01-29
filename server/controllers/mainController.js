@@ -63,7 +63,9 @@ exports.signin = async (req, res) => {
     title: 'Sign In - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('signin', locals);
+  res.render('signin', 
+    {locals, 
+    layout: '../views/layouts/sign'});
 }
 
 // GET Sign Up
@@ -72,8 +74,11 @@ exports.signup = async (req, res) => {
     title: 'Sign Up - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('signup', locals);
+  res.render('signin', 
+    {locals, 
+    layout: '../views/layouts/sign'});
 }
+
 
 // GET Logout
 exports.logout = async (req, res) => {

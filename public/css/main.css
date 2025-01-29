@@ -12,7 +12,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -44,7 +44,7 @@ li {
 a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 18px;
 }
 
 a:hover {
@@ -54,14 +54,13 @@ a:hover {
 /* HEADER */
 header {
     position: relative;
-    padding: 0 2rem;
+    padding: 0 16px;
 }
 
 .navbar,
 .eventsNavbar {
-    width: 100%;
+    width: 80%;
     height: 60px;
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -69,23 +68,24 @@ header {
 }
 
 .navbar .logo a {
-    font-size: 1.5rem;
+    font-size: 29px;
     font-weight: bold;
     color: var(--first-color);
 }
 
 .navbar .links {
     display: flex;
-    gap: 2rem;
+    gap: 40px;
+    margin-top: 10px;
 }
 
-.navbar .login {
-    padding-right: 1rem;
+.navbar .signin {
+    padding-right: 20px;
 }
 
 .navbar .toggle_btn {
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 29px;
     cursor: pointer;
     display: none;
 }
@@ -117,11 +117,11 @@ footer p {
 .signup_btn {
     background-color: var(--first-color);
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 8px 17px;
     border: none;
     outline: none;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -129,12 +129,12 @@ footer p {
 
 .hero_btn {
     background-color: var(--third-color);
-    color: #263238;
-    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    padding: 8px 17px;
     border: none;
     outline: none;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -143,11 +143,11 @@ footer p {
 .logout_btn {
     background-color: var(--fourth-color);
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 8px 17px;
     border: none;
     outline: none;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -158,12 +158,18 @@ footer p {
 }
 
 .hero_btn:hover {
-    color: #00FFB2;
+    color: var(--third-color);
+    transform: scale(1.05);
+}
+
+.logout_btn:hover {
+    color: var(--fourth-color);
     transform: scale(1.05);
 }
 
 .signup_btn:active,
-.hero_btn:active {
+.hero_btn:active,
+.logout_btn:active {
     transform: scale(0.95);
 }
 
@@ -171,7 +177,7 @@ footer p {
 .dropdown_menu {
     display: none;
     position: absolute;
-    right: 2rem;
+    right: 30px;
     top: 60px;
     height: 0;
     width: 300px;
@@ -187,7 +193,7 @@ footer p {
 }
 
 .dropdown_menu li {
-    padding: 0.7rem;
+    padding: 11px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -499,20 +505,20 @@ input:focus {
     background-color: #0A3873;
 }
 
-/*Use this for the "you have ann account? login OR Don't have an account? sign up */
-.login-signup-text {
+/*Use this for the "you have ann account? signin OR Don't have an account? sign up */
+.signin-signup-text {
     margin-top: 20px;
     font-size: 14px;
     color: #777777;
 }
 
-.login-signup-link {
+.signin-signup-link {
     color: #1773DA;
     text-decoration: none;
     font-weight: bold;
 }
 
-.login-signup-link:hover {
+.signin-signup-link:hover {
     text-decoration: underline;
 }
 /*Profile style*/

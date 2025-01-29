@@ -1,9 +1,9 @@
 <!-- this is the body of Profile -->
 <div class="container-fluid container-fluid-custom">
     <main class="main">
-        <h2>Your Profile</h2>
+        <h3 class="acc">You have <span class="volunteer-hours">21</span> Volunteer Hours</h3>
+        <img src="profile-image.jpg" alt="Profile" class="profile-image"> <!-- استبدل بالصورة الفعلية -->
         <div class="profile-section">
-            <img src="profile-image.jpg" alt="Profile" class="profile-image"> <!-- استبدل بالصورة الفعلية -->
             <div class="profile-info">
                 <div class="info-item">
                     <label for="full-name">Full Name:</label>
@@ -33,23 +33,21 @@
         </div>
 
         <div class="volunteering-section">
-            <h3>You have <span class="volunteer-hours">21</span> Volunteer Hours</h3>
             <div class="skills-section">
                 <h4>My Skills</h4>
                 <input type="text" placeholder="Add Skill" class="skill-input">
-                <button class="btn">+ Add Skills</button>
+                <button class="addSkill">+ Add Skills</button>
             </div>
             <div class="history-section">
                 <h4>Volunteering History</h4>
-                <div class="opportunity-card">
+                <div class="opportunity-acc">
                     <div class="title">Opportunity 1 Title</div>
                     <div class="description">Description of opportunity 1.</div>
                 </div>
-                <div class="opportunity-card">
-                    <div class="title">Opportunity 2 Title</div>
-                    <div class="description">Description of opportunity 2.</div>
                 </div>
             </div>
+            <button class="update-acc">Save changes</button>
         </div>
     </main>
+
 </div>

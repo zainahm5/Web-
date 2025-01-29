@@ -74,7 +74,7 @@ exports.signup = async (req, res) => {
     title: 'Sign Up - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('signin', 
+  res.render('signup', 
     {locals, 
     layout: '../views/layouts/sign'});
 }

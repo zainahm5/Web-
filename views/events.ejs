@@ -6,24 +6,35 @@
             <input type="text" placeholder="Event title or keyword" class="search-input">
             <input type="text" placeholder="Location" class="search-input">
             <button class="search-btn">Search</button>
-        
-            <div>
-                <% if (events && events.length > 0) { %>
-                    <% events.forEach(opportunity => { %>
-                        <div class="opportunity-list">
-                            <div class="opportunity-card blue">
-                                <div class="info">
-                                    <div class="text-block">
-                                        <div class="title"><%= opportunity.title %></div>
-                                        <div class="subtitle"><%= opportunity.description %></div>
-                                    </div>
-                                </div>
-                                <button class="btn">View Details</button>
-                            </div>
-                        </div>
-                    <% }) %>
-                <% } else { %>
-                    <p>No events available at the moment.</p>
-                <% } %>
-                
+        </div>
+        <div class="opportunity-list">
+            <div class="opportunity-card blue">
+                <div class="info">
+                    <div class="text-block">
+                        <div class="title">Opportunity 1 Title</div>
+                        <div class="subtitle">Opportunity 1 Description</div>
+                    </div>
+                </div>
+                <button class="btn">View Details</button>
             </div>
+            <div class="opportunity-card red">
+                <div class="info">
+                    <div class="text-block">
+                        <div class="title">Opportunity 2 Title</div>
+                        <div class="subtitle">Opportunity 2 Description</div>
+                    </div>
+                </div>
+                <button class="btn">View Details</button>
+            </div>
+            <div class="opportunity-card green">
+                <div class="info">
+                    <div class="text-block">
+                        <div class="title">Opportunity 3 Title</div>
+                        <div class="subtitle">Opportunity 3 Description</div>
+                    </div>
+                </div>
+                <button class="btn">View Details</button>
+            </div>
+        </div>
+    </main>
+</div>

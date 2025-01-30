@@ -43,3 +43,8 @@ app.use('/', require('./server/routes/index'));
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
 });
+
+// Use the profile routes
+app.use('/', profileRoutes);
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true })); // For parsing form data

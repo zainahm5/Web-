@@ -2,7 +2,8 @@ require('dotenv').config();
 
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-
+const profileRoutes = require('./server/routes/profileRoutes');
+const bodyParser = require('body-parser');
 const connectDB = require('./server/config/db');
 
 const app = express();
@@ -12,11 +13,12 @@ const port = 3000 || process.env.PORT;
 connectDB();
 
 const passport = require("passport");
+require("./server/config/passport");
 const session = require("express-session");
 
 // Session middleware
 app.use(session({
-  secret: "SeasonServe", // Secret string for local development
+  secret: "SeasonServe", // Secret string for 'local' development
   resave: false,
   saveUninitialized: true
 }));
@@ -48,3 +50,4 @@ app.listen(port, () => {
 app.use('/', profileRoutes);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true })); // For parsing form data
+app.use(bodyParser.json());

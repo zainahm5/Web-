@@ -7,16 +7,15 @@ passport.use(
     { usernameField: "email" }, 
     async (email, password, done) => {
       try {
-        const user = await User.findOne({ email });  // Look for the user by email
+        const user = await User.findOne({ email });  
 
         if (!user) {
           return done(null, false, { message: "Invalid credentials" });
         }
 
-        // Compare entered password with the stored password
-        // make sure the password in the Database is stored as plain text ****
-        if (user.password !== password) {
-          return done(null, false, { message: "Invalid credentials" });
+        // Password check (plain text, local بما اننا)
+        if (user.password !== password) {  
+          return done(null, false, { message: "Invalid credentials" });        
         }
 
         return done(null, user);  // Successfully authenticated
@@ -27,12 +26,12 @@ passport.use(
   )
 );
 
-// Serialize user to store in session
-passport.serializeUser(function (user, done) {
+// Serialize user (store the user ID in session)
+passport.serializeUser((user, done) => {
   done(null, user.id);
 });
 
-// Deserialize user from session
+// Deserialize user (which retrieves user details from session)
 passport.deserializeUser(async (id, done) => {
   try {
     const user = await User.findById(id);

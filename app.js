@@ -13,11 +13,12 @@ const port = 3000 || process.env.PORT;
 connectDB();
 
 const passport = require("passport");
+require("./server/config/passport");
 const session = require("express-session");
 
 // Session middleware
 app.use(session({
-  secret: "SeasonServe", // Secret string for local development
+  secret: "SeasonServe", // Secret string for 'local' development
   resave: false,
   saveUninitialized: true
 }));

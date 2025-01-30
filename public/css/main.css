@@ -60,34 +60,29 @@ header {
 .navbar,
 .eventsNavbar {
     width: 80%;
-    height: 60px;
+    height: 70px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar .logo a,
-.eventsNavbar .logo a {
-    font-size: 29px;
-    font-weight: bold;
-    color: var(--first-color);
+.logo {
+    width: 45px;
+    cursor: pointer;
 }
 
-.navbar .links,
-.eventsNavbar .links {
+.links {
     display: flex;
     gap: 40px;
     margin-top: 10px;
 }
 
-.navbar .signin,
-.eventsNavbar .signin {
+.navbar .signin {
     padding-right: 20px;
 }
 
-.navbar .toggle_btn,
-.eventsNavbar .toggle_btn {
+.toggle_btn {
     color: var(--text-color);
     font-size: 29px;
     cursor: pointer;
@@ -309,16 +304,14 @@ section#features {
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
 
-    .navbar .links,
+    .links,
     .navbar .signin,
     .navbar .signup_btn,
-    .eventsNavbar .links,
     .eventsNavbar .logout_btn {
         display: none;
     }
 
-    .navbar .toggle_btn,
-    .eventsNavbar .toggle_btn {
+    .toggle_btn {
         display: block;
     }
 
@@ -328,10 +321,6 @@ section#features {
 
     #home h1 {
         font-size: 29px;
-    }
-
-    .row {
-        flex-direction: column;
     }
 
 }

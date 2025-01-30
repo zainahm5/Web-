@@ -1,9 +1,51 @@
 <!-- this is the body of Profile -->
-
-<div class="proContainer">
-
+<div>
+    <main>
+        <section id="profile">
+            <div class="title">Edit Profile</div>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email Address</span>
+                        <input type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Birth Date</span>
+                        <input type="date" id="birth-date" required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="profileUpdate">
+                    <input type="submit" value="Save Changes">
+                </div>
+            </form>
+        </section>
+    </main>
 </div>
-<!-- <div class="container-fluid container-fluid-custom">
+
+<div class="container-fluid container-fluid-custom">
     <main class="main">
         <h3 class="acc">You have <span class="volunteer-hours">21</span> Volunteer Hours</h3>
         <img src="profile-image.jpg" alt="Profile" class="profile-image">
@@ -47,10 +89,10 @@
                     <div class="title">Opportunity 1 Title</div>
                     <div class="description">Description of opportunity 1.</div>
                 </div>
-                </div>
             </div>
-            <button class="update-acc">Save changes</button>
         </div>
-    </main>
+        <button class="update-acc">Save changes</button>
+</div>
+</main>
 
-</div> -->
+</div>

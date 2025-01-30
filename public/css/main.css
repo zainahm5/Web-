@@ -115,6 +115,7 @@ footer h4 {
 footer p {
     color: #fff;
     margin-bottom: 5px;
+    font-size: 18px;
 }
 
 /* BUTTONS */
@@ -212,39 +213,46 @@ footer p {
 
 /* HOME */
 section#home {
-    width: 90%;
-    color: var(--text-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 
-#home h1 {
+#home h2 {
     font-size: 62px;
     color: var(--first-color);
+    letter-spacing: 1px
 }
 
 #home p {
+    width: 70%;
     margin: 10px 0 40px;
     font-size: 18px;
+    line-height: 25px;
     color: var(--text-color);
 }
 
 /* FEATURES */
 section#features {
-    padding: 60px 96px 0 96px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    margin: 0 auto;
+    padding: 60px 96px 60px 96px;
 }
 
 #features .fea-base {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 16px;
     margin-top: 50px;
 }
-
 
 #features .fea-box {
     background: #F9F9FF;
@@ -253,12 +261,13 @@ section#features {
 }
 
 #features .fea-box i {
-    font-size: 30px;
+    font-size: 35px;
     color: var(--text-color);
 }
 
 #features h3 {
     font-size: 20px;
+    text-align: center;
     font-weight: 600;
     color: var(--text-color);
     padding: 13px 0 7px 0;
@@ -271,58 +280,31 @@ section#features {
     color: var(--text-color);
 }
 
-/* BOXES */
-section#boxes {
-    height: calc(100vh - 60px);
-    margin: auto;
-    text-align: center;
+#features .fea-box:nth-child(1):hover {
+    background-color: var(--fourth-color);
 }
 
-#boxes h1 {
-    font-size: 36px;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: 1rem;
+#features .fea-box:nth-child(2):hover {
+    background-color: var(--first-color);
 }
 
-#boxes p {
-    color: var(--text-color);
-    margin-bottom: 1rem;
+#features .fea-box:nth-child(3):hover {
+    background-color: var(--second-color);
 }
 
-.row {
-    width: 50%;
-    height: 50%;
-    margin-top: 5%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
+#features .fea-box:nth-child(4):hover {
+    background-color: var(--third-color);
 }
 
-.col {
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    transition: 0.5s;
-    min-height: 200px;
-}
-
-h3 {
-    text-align: center;
-    font-weight: 600;
-    color: #fff;
-}
-
-.col:hover {
+#features .fea-box:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
+#features .fea-box:hover i,
+#features .fea-box:hover h3,
+#features .fea-box:hover p {
+    color: #fff;
+}
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {

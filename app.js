@@ -48,3 +48,4 @@ app.listen(port, () => {
 app.use('/', profileRoutes);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true })); // For parsing form data
+app.use(bodyParser.json());

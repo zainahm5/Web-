@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const mainController = require('../controllers/mainController');
 const eventsController = require('../controllers/eventsController');
+//const authRoutes = require('./auth');
 
+//router.use('/auth', authRoutes);
 // App Routes
 router.get('/', mainController.homepage);
 router.get('/about', mainController.about);

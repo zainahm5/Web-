@@ -232,6 +232,22 @@ section#home {
     color: var(--text-color);
 }
 
+/* FEATURES */
+section#features {
+    padding: 60px 96px 0 96px;
+    text-align: center;
+}
+
+#features .fea-box {
+    background: var(--background-color);
+    text-align: start;
+}
+
+#features .fea-box i {
+    font-size: 25px;
+    color: var(--text-color);
+}
+
 /* BOXES */
 section#boxes {
     height: calc(100vh - 60px);

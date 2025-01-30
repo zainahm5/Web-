@@ -238,13 +238,36 @@ section#features {
     text-align: center;
 }
 
+#features .fea-base {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 16px;
+    margin-top: 50px;
+}
+
+
 #features .fea-box {
-    background: var(--background-color);
+    background: #F9F9FF;
     text-align: start;
+    padding: 30px;
 }
 
 #features .fea-box i {
-    font-size: 25px;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+#features h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 13px 0 7px 0;
+}
+
+#features p {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
     color: var(--text-color);
 }
 

@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-const profileRoutes = require('./routes/profileRoutes');
+const profileRoutes = require('./server/routes/profileRoutes');
 const bodyParser = require('body-parser');
 const connectDB = require('./server/config/db');
 const Events = require('./server/models/Events'); 
@@ -54,12 +54,6 @@ app.use('/', profileRoutes);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true })); // For parsing form data
 app.use(bodyParser.json());
-
-
-
-
-
-
 
 app.get('/event/:id', async (req, res) => {
   const eventId = req.params.id;

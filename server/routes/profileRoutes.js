@@ -1,4 +1,4 @@
-// routes/profileRoutes.js
+ routes/profileRoutes.js
 const express = require('express');
 const router = express.Router();
 const profileController = require('../controllers/profileController');
@@ -9,4 +9,4 @@ router.get('/profile', profileController.getProfile);
 // POST request to update the profile
 router.post('/profile', profileController.updateProfile);
 
-module.exports = router;
+module.exports = router; 

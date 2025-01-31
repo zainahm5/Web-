@@ -5,6 +5,7 @@ const expressLayouts = require('express-ejs-layouts');
 const profileRoutes = require('./routes/profileRoutes');
 const bodyParser = require('body-parser');
 const connectDB = require('./server/config/db');
+const Events = require('./server/models/Events'); 
 
 const app = express();
 const port = 3000 || process.env.PORT;
@@ -53,3 +54,28 @@ app.use('/', profileRoutes);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true })); // For parsing form data
 app.use(bodyParser.json());
+
+
+
+
+
+
+
+app.get('/event/:id', async (req, res) => {
+  const eventId = req.params.id;
+
+  try {
+    // Fetch the event from the database using the ID
+    const event = await Events.findById(eventId);
+
+    if (!event) {
+      return res.status(404).send("Event not found");
+    }
+
+    // Pass the event data to the details page
+    res.render('details', { event });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error retrieving event");
+  }
+});

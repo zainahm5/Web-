@@ -1,4 +1,13 @@
 <!-- this is the body of Details -->
 <div class="container-fluid container-fluid-custom">
     <h1>Details</h1>
+    <main>
+        <div class="container">
+            <img class="details-event-image" src="<%= event.image %>" alt="Event Image">
+            <p class="details-info"><strong >Date & Time:</strong> <%=event.time %></p>
+            <p class="details-info"><strong>Location:</strong> <%= event.location %></p>
+            <p class="details-info"><strong>Description:</strong> <%= event.description %></p>
+        </div>
+        <button class="details-btn" >Apply</button>
 </div>
+</main>

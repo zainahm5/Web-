@@ -601,7 +601,7 @@ h3.acc {
 .opportunity-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap:1px;
     padding: 20px;
 }
 
@@ -635,8 +635,7 @@ h3.acc {
 .event-image {
     width: 40px;
     height: 40px;
-    border: 2px solid #263238;
-    border-radius: 50%;
+    border-radius: 10%;
     margin-right: 16px;
 }
 
@@ -824,4 +823,42 @@ input:focus {
 
 .signin-signup-link:hover {
     text-decoration: underline;
+}
+/*Details*/
+
+details.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .details-event-image {
+    width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .details-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: rgb(222, 219, 219);
+    color: #263238;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 400px;
+    margin: 20px;
+    margin-left: 35%;
+}
+
+.details-btn:hover {
+    background-color: #00FFB2;
+    color: #263238;
+}
+.details-info {
+    font-size: 15px;
+    color: #666;
 }

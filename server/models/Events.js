@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { details } = require('../controllers/mainController');
 
 const Schema = mongoose.Schema;
 const EventSchema = new Schema({
@@ -20,9 +19,6 @@ location:{
     required: true
 },
 image:{
-    type: String,
-},
-details:{
     type: String,
 }})
 

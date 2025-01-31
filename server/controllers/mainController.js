@@ -63,9 +63,11 @@ exports.signin = async (req, res) => {
     title: 'Sign In - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('signin', 
-    {locals, 
-    layout: '../views/layouts/sign'});
+  res.render('signin',
+    {
+      locals,
+      layout: '../views/layouts/sign'
+    });
 }
 
 // GET Sign Up
@@ -74,9 +76,11 @@ exports.signup = async (req, res) => {
     title: 'Sign Up - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('signup', 
-    {locals, 
-    layout: '../views/layouts/sign'});
+  res.render('signup',
+    {
+      locals,
+      layout: '../views/layouts/sign'
+    });
 }
 
 
@@ -89,11 +93,8 @@ exports.logout = async (req, res) => {
   res.render('logout', locals);
 }
 
-
-
-const Events = require('../models/Events'); 
+const Events = require('../models/Events');
 const mongoose = require('mongoose');
-
 
 /**
  * GET /
@@ -101,25 +102,24 @@ const mongoose = require('mongoose');
  */
 
 exports.events = async (req, res) => {
-    const locals = {
-        title: 'Events - SeasonServe',
-        description: 'Volunteering Opportunities Website'
-    }; 
+  const locals = {
+    title: 'Events - SeasonServe',
+    description: 'Volunteering Opportunities Website'
+  };
 
-    try {
-        console.log("Fetching events...");
+  try {
+    console.log("Fetching events...");
 
-        const events = await Events.find({});
-        
-        console.log("Fetched events:", events); // This should log the events
+    const events = await Events.find({});
 
-        res.render('events', {
-            locals,
-            events
-        });
+    res.render('events', {
+      locals,
+      events
+    });
 
-    } catch (error) {
-        console.error("Error fetching events:", error);
-        res.status(500).send("Error fetching events");
-    }
+  } catch (error) {
+    console.error("Error fetching events:", error);
+    res.status(500).send("Error fetching events");
+  }
 };
+

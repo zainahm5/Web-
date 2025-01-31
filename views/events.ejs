@@ -16,33 +16,17 @@
             <% events.forEach(opportunity => { %>  <div class="opportunity-list">
                 <div class="opportunity-card blue">
                     <div class="info">
+                        <span><img class="event-image" , src="<% opportunity.image %>"></span>
                         <div class="text-block">
                             <div class="title"><%= opportunity.title %></div>
-                            <div class="subtitle"><%= opportunity.description %></div>
+                            <div class="subtitle"><i class="fa-regular fa-calendar">&nbsp;</i><%=opportunity.time %>  &nbsp; 
+                                 <i class="fa-solid fa-location-dot"></i>&nbsp;<%=opportunity.location %></div>
                         </div>
                     </div>
-                    <button class="btn">View Details</button>
+                    <a href="/event/<%= opportunity._id %>" class="btn">View Details</a>
                 </div>
             </div>
         <% }) %>
-            <div class="opportunity-card red">
-                <div class="info">
-                    <div class="text-block">
-                        <div class="title">Opportunity 2 Title</div>
-                        <div class="subtitle">Opportunity 2 Description</div>
-                    </div>
-                </div>
-                <button class="btn">View Details</button>
-            </div>
-            <div class="opportunity-card green">
-                <div class="info">
-                    <div class="text-block">
-                        <div class="title">Opportunity 3 Title</div>
-                        <div class="subtitle">Opportunity 3 Description</div>
-                    </div>
-                </div>
-                <button class="btn">View Details</button>
-            </div>
         </div>
     </main>
 </div>

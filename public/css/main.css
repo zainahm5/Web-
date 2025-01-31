@@ -315,6 +315,7 @@ section#profile {
     padding: 30px;
     margin: 0 auto;
     margin-top: 200px;
+    margin-bottom: 200px;
     border-radius: 10px;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
@@ -327,100 +328,118 @@ section#profile {
     padding: 13px 0 7px 0;
 }
 
-#profile form .user-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 12px 0;
+#profile .proForm {
+    margin-top: 30px;
 }
 
-form .user-details .input-box {
-    margin-bottom: 15px;
-    width: calc(100% / 2 - 20px);
+.proForm .input-box {
+    width: 100%;
+    margin-top: 20px;
 }
 
-form .user-details .input-box .details {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
+.input-box .proDetails {
+    color: var(--text-color);
 }
 
-.user-details .input-box input {
+.proForm :where(.input-box input, .select-box) {
+    position: relative;
     height: 45px;
     width: 100%;
     outline: none;
     border-radius: 5px;
     border: 1px solid #ccc;
     padding-left: 15px;
+    margin-top: 8px;
     font-size: 16px;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
 }
 
-.user-details .input-box input:focus,
-.user-details .input-box input:valid {
+.input-box input:focus {
     border-color: var(--fourth-color);
 }
-form .gender-details .gender-title {
-    font-size: 20px;
+
+.proForm .proCol {
+    display: flex;
+    column-gap: 15px;
+}
+
+.input-box .historyVol {
+    height: auto;
+    background: #F9F9FF;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.historyVol h3 {
+    color: var(--text-color);
+    font-size: 16px;
     font-weight: 500;
 }
 
-form .gender-details .category {
-    display: flex;
-    width: 80%;
-    margin: 14px 0;
-    justify-content: space-between;
+.historyVol p {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
 }
 
-.gender-details .category label {
+.proForm .gender-box {
+    margin-top: 20px;
+}
+
+.gender-box .gender-title {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.proForm :where(.gender-option, .gender) {
     display: flex;
     align-items: center;
+    column-gap: 100px;
 }
 
-.gender-details .category .dot {
-    height: 18px;
-    width: 18px;
-    background: #d9d9d9;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 5px solid transparent;
-    transition: all 0.3s ease;
+.proForm .gender {
+    column-gap: 5px;
 }
 
-#dot-1:checked ~ .category label .one,
-#dot-2:checked ~ .category label .two {
-    border-color: #d9d9d9;
-    background: var(--fourth-color);
+.proForm :where(.gender input, .gender label) {
+    cursor: pointer;
+    font-weight: 400;
 }
 
-form input[type="radio"] {
-    display: none;
-}
-
-form .profileUpdate {
-    height: 45px;
-    margin: 45px 0;
-}
-
-form .profileUpdate input {
+.select-box select {
     height: 100%;
     width: 100%;
     outline: none;
-    color: #fff;
     border: none;
-    font-size: 18px;
-    font-weight: 500;
-    background: var(--first-color);
-    letter-spacing: 1px;
-    border-radius: 5px;
+    color: #9c9c9c;
+    font-size: 16px;
 }
 
-form .profileUpdate input:hover {
+.proForm .profileUpdate {
+    height: 45px;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    margin: 45px 0;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--first-color);
+}
+
+.proForm .profileUpdate:hover {
     background: var(--second-color);
 }
 
-.main {
+
+/* .main {
     width: 80%;
     background: white;
     padding: 40px;
@@ -541,7 +560,7 @@ h3.acc {
 
 .update-acc:hover {
     background-color: #0A3873;
-}
+} */
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
@@ -572,22 +591,8 @@ h3.acc {
         font-size: 50px;
     }
 
-    section#profile {
-        max-width: 100%;
-    }
-
-    form .user-details .input-box {
-        margin-bottom: 15px;
-        width: 100%;
-    }
-
-    form .gender-details .category {
-        width: 100%;
-    }
-
-    #profile form .user-details {
-        max-height: 300px;
-
+    .proForm .proCol {
+        flex-wrap: wrap;
     }
 }
 

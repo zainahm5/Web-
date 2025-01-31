@@ -1,8 +1,93 @@
 <!-- this is the body of Profile -->
-<div class="container-fluid container-fluid-custom">
+<div>
+    <main>
+        <section id="profile">
+            <div class="title">Edit Profile</div>
+            <form action="#" class="proForm">
+                <div class="input-box">
+                    <span class="proDetails">Full Name</span>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="proDetails">Email Address</span>
+                    <input type="text" placeholder="example@gmail.com" required>
+                </div>
+                <div class="input-box">
+                    <span class="proDetails">Phone Number</span>
+                    <input type="text" placeholder="+966 xx xxx xxxx" required>
+                </div>
+                <div class="input-box">
+                    <span class="proDetails">Birth Date</span>
+                    <input type="date" id="birth-date" required>
+                </div>
+
+                <div class="proCol">
+                    <div class="input-box">
+                        <span class="proDetails">My Skills</span>
+                        <div class="skillCol">
+                            <div class="select-box">
+                                <select>
+                                    <option hidden>Skill</option>
+                                    <option>Teamwork</option>
+                                    <option>Communication</option>
+                                    <option>Leadership</option>
+                                    <option>Problem-solving</option>
+                                    <option>Time management</option>
+                                    <option>Creativity</option>
+                                    <option>Organization</option>
+                                    <option>Public speaking</option>
+                                    <option>Event planning</option>
+                                    <option>Fundraising</option>
+                                    <option>Social media management</option>
+                                    <option>First aid & CPR</option>
+                                    <option>Data entry & management</option>
+                                    <option>Graphic design</option>
+                                    <option>Web development</option>
+                                    <option>Marketing & Outreach</option>
+                                    <option>Research & analysis</option>
+                                    <option>Teaching & Tutoring</option>
+                                    <option>Cultural awareness</option>
+                                    <option>Mentorship</option>
+                                    <option>Networking</option>
+                                    <option>Customer service</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span class="proDetails">Volunteering History</span>
+                        <div class="historyVol">
+                            <h3>Opportunity 1 Title</h3>
+                            <p>Description of opportunity 1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gender-box">
+                    <span class="gender-title">Gender</span>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-female" name="gender" checked>
+                            <label for="check">Female</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-male" name="gender">
+                            <label for="check">Male</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="profileUpdate">Save Changes</button>
+            </form>
+        </section>
+
+
+
+
+        <!-- <div class="container-fluid container-fluid-custom">
     <main class="main">
         <h3 class="acc">You have <span class="volunteer-hours">21</span> Volunteer Hours</h3>
-        <img src="profile-image.jpg" alt="Profile" class="profile-image"> <!-- استبدل بالصورة الفعلية -->
+        <img src="profile-image.jpg" alt="Profile" class="profile-image">
         <div class="profile-section">
             <div class="profile-info">
                 <div class="info-item">
@@ -22,7 +107,6 @@
                     <select id="gender">
                         <option value="female">Female</option>
                         <option value="male">Male</option>
-                        <option value="other">Other</option>
                     </select>
                 </div>
                 <div class="info-item">
@@ -44,10 +128,9 @@
                     <div class="title">Opportunity 1 Title</div>
                     <div class="description">Description of opportunity 1.</div>
                 </div>
-                </div>
             </div>
-            <button class="update-acc">Save changes</button>
         </div>
+        <button class="update-acc">Save changes</button>
+</div> -->
     </main>
-
 </div>

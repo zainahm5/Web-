@@ -4,56 +4,66 @@
     <div class="sign-card">
         <h2 class="sign-heading">Create an Account</h2>
         <p class="sign-subheading">Create an account to continue</p>
-        <form class="form" id="signupForm">
+        <form class="form" id="signupForm" action="/signup" method="POST">
 
             <!-- Step 1 -->
             <div id="step1" class="form-step">
                 <div class="form-group">
                     <label for="email">Email address:</label>
-                    <input type="email" id="email" required placeholder="example@gmail.com">
+                    <input type="email" id="email" name="email" required placeholder="example@gmail.com">
                 </div>
                 <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" required placeholder="First and Last Name">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" name="password" required>
                 </div>
                 <div class="form-group">
-                    <label for="confirm_password">Confirm password:</label>
-                    <input type="password" id="confirmPassword" required>
+                    <label for="confirmPassword">Confirm password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
                 </div>
                 <button type="button" class="sign-btn" onclick="nextStep(2)">Next Step</button>
                 <p class="login-signup-text">
-                    Already have an account? <a href="#" class="login-signup-link">Login</a>
+                    Already have an account? <a href="/signin" class="login-signup-link">Login</a>
                 </p>
             </div>
 
             <!-- Step 2 -->
             <div id="step2" class="form-step" style="display:none;">
+                <!-- Hidden fields to store Step 1 values, since it used to only submit Step 2 values -->
+                <input type="hidden" id="hiddenEmail" name="email">
+                <input type="hidden" id="hiddenFirstName" name="firstName">
+                <input type="hidden" id="hiddenLastName" name="lastName">
+                <input type="hidden" id="hiddenPassword" name="password">
+
                 <div class="form-group">
                     <label for="phone">Phone number:</label>
-                    <input type="text" id="phone" required>
+                    <input type="text" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="national_id">National ID / Residence number:</label>
-                    <input type="text" id="nationalID" required>
+                    <label for="nationalID">National ID / Residence number:</label>
+                    <input type="text" id="nationalID" name="nationalID" required>
                 </div>
                 <div class="form-group">
-                    <label for="birthdate">Birth date:</label>
-                    <input type="date" id="birthDate" required>
+                    <label for="birthDate">Birth date:</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
                 </div>
                 <div class="form-group">
                     <label for="gender">Gender:</label>
-                    <select id="gender" required>
+                    <select id="gender" name="gender" required>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="education">Educational Qualification:</label>
-                    <select id="education" required>
+                    <select id="education" name="education" required>
                         <option value="select">Select</option>
                         <option value="highSchool">High School</option>
                         <option value="bachelorsDegree">Bachelor's Degree</option>
@@ -63,7 +73,7 @@
                 </div>
                 <div class="form-group">
                     <label for="volunteeringExp">Do you have previous volunteering experience?</label>
-                    <select id="volunteeringExp" required>
+                    <select id="volunteeringExp" name="volunteeringExp" required>
                         <option value="yes">Yes, I have</option>
                         <option value="no">No</option>
                     </select>
@@ -76,9 +86,16 @@
 
 <script>
     function nextStep(step) {
-        if(step === 2) {
-            document.getElementById('step1').style.display = 'none';
-            document.getElementById('step2').style.display = 'block';
+        if (step === 2) {
+            // Move values from Step 1 to hidden inputs before showing Step 2
+            document.getElementById("hiddenEmail").value = document.getElementById("email").value;
+            document.getElementById("hiddenFirstName").value = document.getElementById("firstName").value;
+            document.getElementById("hiddenLastName").value = document.getElementById("lastName").value;
+            document.getElementById("hiddenPassword").value = document.getElementById("password").value;
+
+            document.getElementById("step1").style.display = "none";
+            document.getElementById("step2").style.display = "block";
         }
     }
 </script>
+

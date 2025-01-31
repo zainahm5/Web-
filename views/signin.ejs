@@ -6,6 +6,10 @@
             <h2 class="sign-heading">Login to Your Account</h2>
             <p class="sign-subheading">Please enter your email and password to continue</p>
             
+            <% if (error) { %>
+                <div class="error-box"><%= error %></div>
+            <% } %>
+            
             <form class="form" action="/signin" method="POST">
                 <div class="form-group">
                     <label for="email">Email address:</label>

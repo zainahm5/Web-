@@ -6,7 +6,7 @@ const router = express.Router();
 // Sign Up (Create an Account) Route
 router.post("/signup", async (req, res) => {
   try {
-    console.log("Received form data:", req.body);  
+    console.log("Received form data:", req.body);
 
     // Convert arrays to single values
     const userData = {
@@ -22,20 +22,28 @@ router.post("/signup", async (req, res) => {
       volunteeringExp: req.body.volunteeringExp
     };
 
-    console.log("Processed user data:", userData);  
+    console.log("Processed user data:", userData);
 
     // Check if email already exists
-    const existingUser = await User.findOne({ email: userData.email });
+    const existingUser = await User.findOne({ email: userData.email.trim().toLowerCase() });
     if (existingUser) {
-      return res.status(400).send("Email already exists! Try logging in.");
+      console.log("Signup failed: Email already registered");
+      return res.render("signup", { 
+        error: "The email you entered is already registered.", 
+        locals: {
+            title: 'Sign Up - SeasonServe',
+            description: 'Create an account for volunteering'
+        },
+        layout: '../views/layouts/sign'
+    });    
     }
 
     // Create and save new user
     const newUser = new User(userData);
     await newUser.save();
-    
-    console.log("User created successfully:", newUser);  
-    res.redirect("/signin");  // Redirect to sign-in page (ممكن نخليه على طول للهوم بيج)
+
+    console.log("User created successfully:", newUser);
+    res.redirect("/signin");
   } catch (err) {
     console.error("Error creating user:", err);
     res.status(500).send("Error creating user");
@@ -50,9 +58,16 @@ router.post("/signin", (req, res, next) => {
       return next(err);
     }
     if (!user) {
-      console.log("Login failed:", info.message);
-      return res.status(400).send("Invalid email or password!");
-    }
+      console.log("Login failed:", info?.message);
+      return res.render("signin", { 
+        error: "Invalid email or password!",
+        locals: {
+          title: 'Sign In - SeasonServe',
+          description: 'Volunteering Opportunities Website'
+        },
+        layout: '../views/layouts/sign'
+      });
+    }    
 
     req.logIn(user, (err) => {
       if (err) {
@@ -65,4 +80,16 @@ router.post("/signin", (req, res, next) => {
   })(req, res, next);
 });
 
+// Check if email already exists (for Step 1 validation)
+router.get("/check-email", async (req, res) => {
+  const email = req.query.email.trim().toLowerCase();
+  const existingUser = await User.findOne({ email });
+
+  if (existingUser) {
+      return res.json({ exists: true });
+  }
+  return res.json({ exists: false });
+});
+
 module.exports = router;
+

@@ -4,19 +4,27 @@
         <h2>Opportunities</h2>
         <div class="search-bar">
             <input type="text" placeholder="Event title or keyword" class="search-input">
-            <input type="text" placeholder="Location" class="search-input">
+            <select class="location" id="location">Location
+                <option value="Riyadh">Riyadh</option>
+                <option value="Jeddah">Jeddah</option>
+                <option value="Dammam">Dammam</option>
+                <option value="Hail">Hail</option>
+            </select>
             <button class="search-btn">Search</button>
         </div>
         <div class="opportunity-list">
-            <div class="opportunity-card blue">
-                <div class="info">
-                    <div class="text-block">
-                        <div class="title">Opportunity 1 Title</div>
-                        <div class="subtitle">Opportunity 1 Description</div>
+            <% events.forEach(opportunity => { %>  <div class="opportunity-list">
+                <div class="opportunity-card blue">
+                    <div class="info">
+                        <div class="text-block">
+                            <div class="title"><%= opportunity.title %></div>
+                            <div class="subtitle"><%= opportunity.description %></div>
+                        </div>
                     </div>
+                    <button class="btn">View Details</button>
                 </div>
-                <button class="btn">View Details</button>
             </div>
+        <% }) %>
             <div class="opportunity-card red">
                 <div class="info">
                     <div class="text-block">

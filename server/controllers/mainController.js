@@ -88,3 +88,38 @@ exports.logout = async (req, res) => {
   }
   res.render('logout', locals);
 }
+
+
+
+const Events = require('../models/Events'); 
+const mongoose = require('mongoose');
+
+
+/**
+ * GET /
+ * Events
+ */
+
+exports.events = async (req, res) => {
+    const locals = {
+        title: 'Events - SeasonServe',
+        description: 'Volunteering Opportunities Website'
+    }; 
+
+    try {
+        console.log("Fetching events...");
+
+        const events = await Events.find({});
+        
+        console.log("Fetched events:", events); // This should log the events
+
+        res.render('events', {
+            locals,
+            events
+        });
+
+    } catch (error) {
+        console.error("Error fetching events:", error);
+        res.status(500).send("Error fetching events");
+    }
+};

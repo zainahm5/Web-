@@ -367,6 +367,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
 }
 
 .opportunity-card {
@@ -432,8 +433,8 @@ h3 {
 .btn {
     padding: 8px 16px;
     font-size: 16px;
-    background-color: #1773DA;
-    color: #fff;
+    background-color: rgb(244, 244, 244);
+    color: #1773DA;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -441,9 +442,26 @@ h3 {
 }
 
 .btn:hover {
-    background-color: #0A3873;
+    background-color: #1773DA;
 }
 
+.location{
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.search-btn{
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #0A387C;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 100px;
+}
 /* Sign up / Log in*/
 .sign-container {
     display: flex;

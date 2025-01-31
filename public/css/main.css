@@ -824,8 +824,8 @@ input:focus {
 .signin-signup-link:hover {
     text-decoration: underline;
 }
-/*Details*/
 
+/*Details*/
 details.container {
     max-width: 1200px;
     margin: 0 auto;
@@ -862,4 +862,32 @@ details.container {
 .details-info {
     font-size: 15px;
     color: #666;
+}
+
+.error-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-wrapper .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }

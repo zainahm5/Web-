@@ -9,4 +9,4 @@ router.get('/profile', profileController.getProfile);
 // POST request to update the profile
 router.post('/profile', profileController.updateProfile);
 
-module.exports = router; 
+module.exports = router;

@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-const profileRoutes = require('./routes/profileRoutes');
+const profileRoutes = require('./server/routes/profileRoutes');
 const bodyParser = require('body-parser');
 const connectDB = require('./server/config/db');
 
@@ -51,21 +51,9 @@ app.use('/', profileRoutes);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true })); // For parsing form data
 app.use(bodyParser.json());
-const express = require('express');
-const app = express();
-const profileRoutes = require('./routes/profileRoutes');
 
-// Set EJS as the templating engine
-app.set('view engine', 'ejs');
 
-// Middleware to parse JSON bodies
-app.use(express.json());
 
-// Use the profile routes
-app.use('/', profileRoutes);
 
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+
+

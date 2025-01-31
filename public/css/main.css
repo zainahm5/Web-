@@ -824,9 +824,8 @@ input:focus {
 .signin-signup-link:hover {
     text-decoration: underline;
 }
-<<<<<<< HEAD
-/*Details*/
 
+/*Details*/
 details.container {
     max-width: 1200px;
     margin: 0 auto;
@@ -862,7 +861,7 @@ details.container {
 .details-info {
     font-size: 15px;
     color: #666;
-=======
+}
 
 .error-box {
     background-color: #f8d7da;
@@ -890,5 +889,4 @@ details.container {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
->>>>>>> 248638b (fixed signin & signup step 1)
 }

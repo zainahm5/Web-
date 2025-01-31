@@ -63,41 +63,21 @@ exports.signin = async (req, res) => {
     title: 'Sign In - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-<<<<<<< HEAD
-  res.render('signin',
-    {
-      locals,
-      layout: '../views/layouts/sign'
-    });
-=======
   res.render('signin', { 
     locals, 
     layout: '../views/layouts/sign',
     error: null  // `error` is always defined
   });
->>>>>>> 248638b (fixed signin & signup step 1)
 }
 
 // GET Sign Up
 exports.signup = async (req, res) => {
   const locals = {
     title: 'Sign Up - SeasonServe',
-<<<<<<< HEAD
-    description: 'Volunteering Opportunities Website'
-  }
-  res.render('signup',
-    {
-      locals,
-      layout: '../views/layouts/sign'
-    });
-}
-
-=======
     description: 'Create an account for volunteering'
   };
   res.render('signup', { locals, layout: '../views/layouts/sign', error: null });
 };
->>>>>>> 248638b (fixed signin & signup step 1)
 
 // GET Logout
 exports.logout = async (req, res) => {

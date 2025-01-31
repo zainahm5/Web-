@@ -1,11 +1,9 @@
 // controllers/profileController.js
 exports.getProfile = (req, res) => {
     // Fetch user data from a database or service
-    const userProfile = {
-        name: "John Doe",
-        email: "john.doe@example.com",
-        bio: "Volunteer enthusiast."
-    };
+       const userProfile  = require('./models/User');
+    const mongoose = require('mongoose');
+
     res.render('profile', { profile: userProfile });
 };
 

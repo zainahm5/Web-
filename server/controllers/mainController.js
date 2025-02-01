@@ -54,7 +54,7 @@ exports.profile = async (req, res) => {
   }
   res.render('profile', {
     locals,
-    user: req.user ,
+    user: req.user,
     layout: '../views/layouts/main'
   });
 }
@@ -69,7 +69,7 @@ exports.updateProfile = async (req, res) => {
     const skillsArray = skills ? skills.split(",") : [];
 
     const updatedUser = await User.findByIdAndUpdate(
-      req.user._id, 
+      req.user._id,
       { firstName, lastName, education, volunteeringExp, skills: skillsArray },
       { new: true }
     );
@@ -139,4 +139,3 @@ exports.events = async (req, res) => {
     res.status(500).send("Error fetching events");
   }
 };
-

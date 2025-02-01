@@ -17,7 +17,7 @@
             <% events.forEach(opportunity => { %>  <div class="opportunity-list">
                 <div class="opportunity-card red">
                     <div class="info">
-                        <span><img class="event-image" src="${opportunity.image}" alt="Event"></span>
+                        <span><img class="event-image" src=<%= opportunity.image %> alt="Event"></span>
                         <div class="text-block">
                             <div class="title"><%= opportunity.title %></div>
                             <div class="subtitle"><i class="fa-regular fa-calendar">&nbsp;</i><%=opportunity.time %>  &nbsp; 

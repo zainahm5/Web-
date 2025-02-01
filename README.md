@@ -78,24 +78,31 @@ Our authentication system is fully connected to our MongoDB database, making eve
 
 # Screenshots
 ## Website 
-
+![Image](https://github.com/user-attachments/assets/862587a6-c73d-4bce-8140-a2f86cd8b539)
 Figure 2 Interactive screen with great responsiveness
 
-
+![Image](https://github.com/user-attachments/assets/2b7c05d7-8ce3-4ec9-90a9-d71790d517d8)
 Figure 3 Home page with a features section
 
+![Image](https://github.com/user-attachments/assets/b405373d-1c6b-4346-a315-6786d628fde1)
 Figure 4 About us
 
+![Image](https://github.com/user-attachments/assets/a7c58f91-501f-489f-8554-7cba3fb06703)
 Figure 5 Sign up includes two steps to ensure security and reliability
 
+![Image](https://github.com/user-attachments/assets/fff06f49-2607-4b54-82a5-16d8725d10d4)
 Figure 6 Some restrictions applied to the sign up
 
+![Image](https://github.com/user-attachments/assets/08938c70-905b-49bf-9063-237429b620b4)
 Figure 7 Log in
 
+![Image](https://github.com/user-attachments/assets/1d879bea-1991-4b0f-bfc7-5a2842f8c3bf)
 Figure 8 Invalid data
 
+![Image](https://github.com/user-attachments/assets/ee8f1e8d-6bdb-439f-8018-0cfaa518adf5)
 Figure 9 The user dashboard header has been updated, and the username is now displayed
 
+![Image](https://github.com/user-attachments/assets/a9eb94fe-42b1-4a3e-b639-136de00c5423)
 Figure 10 Events page
 
 
@@ -109,7 +116,22 @@ Figure 14 Apply for the event
 
 Figure 15 Display and update Profile page (contains read-only and editable)
 
-
+![Image](https://github.com/user-attachments/assets/e9585b04-2b9a-4b11-b436-d8e7fa7d5b5a)
+![Image](https://github.com/user-attachments/assets/1944b861-b11a-4aad-b1ba-6a130250246d)
+![Image](https://github.com/user-attachments/assets/fe43d3b2-5ba3-4bdd-b31c-350800977c92)
+![Image](https://github.com/user-attachments/assets/7bd2a56a-ecb3-4a87-a9db-8a768a6d3e13)
+![Image](https://github.com/user-attachments/assets/77ca526e-2427-4c95-9b54-b187da9838ad)
+![Image](https://github.com/user-attachments/assets/ba667f7b-5534-4725-b0ba-ccd816e93055)
+![Image](https://github.com/user-attachments/assets/11cb75e9-0e08-473c-8d40-6fc9715946a2)
+![Image](https://github.com/user-attachments/assets/ab518d68-c16a-4075-b484-6159963de4be)
+![Image](https://github.com/user-attachments/assets/141e7d0d-69df-40ad-a83f-621aba9ccb1a)
+![Image](https://github.com/user-attachments/assets/932f20b1-6627-4868-ad61-addc180de26a)
+![Image](https://github.com/user-attachments/assets/2030d3c2-8cdf-4f40-bf3e-e6f199d39e7b)
+![Image](https://github.com/user-attachments/assets/c3ff5edd-1562-4225-9aff-b6ff11613382)
+![Image](https://github.com/user-attachments/assets/063e050b-6042-4e9b-bbe9-cea5a8ff7a20)
+![Image](https://github.com/user-attachments/assets/dc34dfea-645b-4507-9869-b00a9edc4b40)
+![Image](https://github.com/user-attachments/assets/62aafea1-173f-42bd-afa4-6c436b488c7e)
+![Image](https://github.com/user-attachments/assets/974a7939-a52e-4250-b292-446addad0822)
 
 
 ## Database

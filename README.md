@@ -109,7 +109,6 @@ Figure 7 Log in
 Figure 8 Invalid data
 
 ![Image](https://github.com/user-attachments/assets/ab518d68-c16a-4075-b484-6159963de4be)
-![Image](https://github.com/user-attachments/assets/ab518d68-c16a-4075-b484-6159963de4be)
 Figure 9 The user dashboard header has been updated, and the username is now displayed
 
 ![Image](https://github.com/user-attachments/assets/11cb75e9-0e08-473c-8d40-6fc9715946a2)

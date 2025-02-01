@@ -4,9 +4,13 @@ exports.dashboard = async (req, res) => {
       title: 'Dashboard - SeasonServe',
       description: 'Volunteering Opportunities Website'
     }
-    res.render('dashboard/index', {
-      // userName: req.user.firstName,
-      locals,
-      layout: '../views/layouts/main'
-    });
-  }
+    try {
+      const user = req.user; // Assuming user is stored in `req.user`
+      
+      res.render("dashboard", { user });
+    } catch (err) {
+      console.error("Error loading dashboard:", err);
+      res.status(500).send("Error loading dashboard");
+    }
+  };
+  

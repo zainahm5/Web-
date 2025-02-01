@@ -6,6 +6,10 @@ Beyond connecting people with meaningful experiences, the platform helps volunte
 
 
 
+
+
+
+
 2.	Goals
    
 •	Connect Volunteers: Enable users to find and sign up for volunteer opportunities.
@@ -14,10 +18,18 @@ Beyond connecting people with meaningful experiences, the platform helps volunte
 
 
 
+
+
+
+
 3.	Flow Chart
 
    
 Figure 1 SeasonServe Flow Chart
+
+
+
+
 
 
 
@@ -36,6 +48,8 @@ Then we cloned the repository we had already created on GitHub and began integra
 We set up necessary dependencies, such as: express, mongoose, dotenv, passport, nodemon, etc.
 
 
+
+
 •	MongoDB Setup 
 
 For managing our database, we installed MongoDB and created a new project. 
@@ -43,6 +57,8 @@ To configure it, we followed these steps:
 o	To securely keep our MongoDB connection string, we created a.env file.
 o	Then we use Mongoose to establish a connection to MongoDB and define models and schemas for our data.
 o	We used CRUD operations to interact with the database.
+
+
 
 
 •	Folder Structure
@@ -58,7 +74,13 @@ o	package.json: Metadata for the Node.js project, including dependencies.
 
 
 
+
+
+
+
+
 5.	Technologies
+
    
 The project utilizes the following technologies for Frontend:
 •	EJS (Embedded JavaScript): For templating and rendering HTML pages.
@@ -68,10 +90,12 @@ The project utilizes the following technologies for Frontend:
 Additionally, we made sure the project is completely responsive, offering the best possible user experience on a range of screens and devices.
 
 
+
 Backend Technologies:
 
 •	Node.js: For server-side development.
 •	Express.js: A web application framework for Node.js, facilitating the creation of web servers.
+
 
 
 Authentication Implementation:
@@ -82,7 +106,16 @@ Our authentication system is fully connected to our MongoDB database, making eve
 
 
 
+
+
+
+
+
+
 6.	Screenshots
+
+
+
    
 6.1.	Website 
 
@@ -117,9 +150,14 @@ Figure 14 Apply for the event
 Figure 15 Display and update Profile page (contains read-only and editable)
 
 
+
+
 6.2.	Database
 
 Figure 16 Database
+
+
+
 
 
 
@@ -133,6 +171,9 @@ We planned to accomplish the following for our website's future development:
 •	Password Reset Option: enables users to securely reset their passwords.
 •	Notification System: Provides updates and alerts to users. 
 •	User Communication System: Allows interaction among users.  
+
+
+
 
 
 

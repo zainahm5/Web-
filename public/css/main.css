@@ -505,6 +505,64 @@ section#dash {
     text-align: center;
 }
 
+/* ABOUT */
+section#about {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+
+#about .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 16px;
+    margin-top: 50px;
+}
+
+#about .team-box {
+    background: #F9F9FF;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+#about .team-box i {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+#about h1 {
+    font-size: 40px;
+    color: var(--first-color);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+#about h2 {
+    font-size: 30px;
+    color: var(--third-color);
+    letter-spacing: 1px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#about h3 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+#about p {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+
 /* .main {
     width: 80%;
     background: white;
@@ -645,6 +703,7 @@ h3.acc {
     .dropdown_menu {
         display: block;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -660,9 +719,9 @@ h3.acc {
     .proForm .proCol {
         flex-wrap: wrap;
     }
+
 }
 
-/* ------------------------------------------------ */
 /* List of opportunities */
 .opportunity-list {
     display: flex;
@@ -747,13 +806,14 @@ h3.acc {
     background-color: #1773DA;
 }
 
-.location{
+.location {
     appearance: none;
     background-color: white;
     padding-left:  10px;
     width: 140px;
     font-size: 16px;
     cursor: inherit;
+    border-color:#c4c3c3;
     border-color:#c4c3c3;
     height: 42px;
     color: #c3c3c3;
@@ -772,6 +832,7 @@ h3.acc {
     margin-left: 100px;
     width: max-content;
 }
+
 /* Sign up / Log in*/
 .sign-container {
     display: flex;

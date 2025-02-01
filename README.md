@@ -95,45 +95,45 @@ Figure 4 About us
 Figure 5 Sign up includes two steps to ensure security and reliability
 
 ![Image](https://github.com/user-attachments/assets/a9eb94fe-42b1-4a3e-b639-136de00c5423)
-![Image](https://github.com/user-attachments/assets/e9585b04-2b9a-4b11-b436-d8e7fa7d5b5a)
-![Image](https://github.com/user-attachments/assets/1944b861-b11a-4aad-b1ba-6a130250246d)
+![Image](https://github.com/user-attachments/assets/141e7d0d-69df-40ad-a83f-621aba9ccb1a)
+![Image](https://github.com/user-attachments/assets/2030d3c2-8cdf-4f40-bf3e-e6f199d39e7b)
+![Image](https://github.com/user-attachments/assets/c3ff5edd-1562-4225-9aff-b6ff11613382)
 Figure 6 Some restrictions applied to the sign up
 
-![Image](https://github.com/user-attachments/assets/fe43d3b2-5ba3-4bdd-b31c-350800977c92)
+
+![Image](https://github.com/user-attachments/assets/932f20b1-6627-4868-ad61-addc180de26a)
 Figure 7 Log in
 
-![Image](https://github.com/user-attachments/assets/7bd2a56a-ecb3-4a87-a9db-8a768a6d3e13)
+
 Figure 8 Invalid data
 
-![Image](https://github.com/user-attachments/assets/77ca526e-2427-4c95-9b54-b187da9838ad)
+![Image](https://github.com/user-attachments/assets/ab518d68-c16a-4075-b484-6159963de4be)
 Figure 9 The user dashboard header has been updated, and the username is now displayed
 
 ![Image](https://github.com/user-attachments/assets/ba667f7b-5534-4725-b0ba-ccd816e93055)
 Figure 10 Events page
 
-![Image](https://github.com/user-attachments/assets/11cb75e9-0e08-473c-8d40-6fc9715946a2)
+![Image](https://github.com/user-attachments/assets/77ca526e-2427-4c95-9b54-b187da9838ad)
 Figure 11 Users can search for event
 
 ![Image](https://github.com/user-attachments/assets/ab518d68-c16a-4075-b484-6159963de4be)
 Figure 12 It provides particular classifications, like by city.
 
+![Image](https://github.com/user-attachments/assets/7bd2a56a-ecb3-4a87-a9db-8a768a6d3e13)
 Figure 13 View event details, including date, location, time, and description
 
+![Image](https://github.com/user-attachments/assets/fe43d3b2-5ba3-4bdd-b31c-350800977c92)
 Figure 14 Apply for the event
 
+![Image](https://github.com/user-attachments/assets/e9585b04-2b9a-4b11-b436-d8e7fa7d5b5a)
+![Image](https://github.com/user-attachments/assets/1944b861-b11a-4aad-b1ba-6a130250246d)
 Figure 15 Display and update Profile page (contains read-only and editable)
 
 
 
+![Image](https://github.com/user-attachments/assets/11cb75e9-0e08-473c-8d40-6fc9715946a2)
 
 
-
-
-
-![Image](https://github.com/user-attachments/assets/141e7d0d-69df-40ad-a83f-621aba9ccb1a)
-![Image](https://github.com/user-attachments/assets/932f20b1-6627-4868-ad61-addc180de26a)
-![Image](https://github.com/user-attachments/assets/2030d3c2-8cdf-4f40-bf3e-e6f199d39e7b)
-![Image](https://github.com/user-attachments/assets/c3ff5edd-1562-4225-9aff-b6ff11613382)
 
 
 

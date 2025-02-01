@@ -4,11 +4,12 @@
         <h2>Opportunities</h2>
         <div class="search-bar">
             <input type="text" placeholder="Event title or keyword" class="search-input">
-            <select class="location" id="location">Location
+            <i class="fa-solid fa-location-dot">&nbsp;</i>
+             <select class="location" id="location">Location
+                <option value="All">All</option>
                 <option value="Riyadh">Riyadh</option>
                 <option value="Jeddah">Jeddah</option>
                 <option value="Dammam">Dammam</option>
-                <option value="Hail">Hail</option>
             </select>
             <button class="search-btn">Search</button>
         </div>
@@ -16,7 +17,7 @@
             <% events.forEach(opportunity => { %>  <div class="opportunity-list">
                 <div class="opportunity-card red">
                     <div class="info">
-                        <span><img class="event-image" , src="<% opportunity.image %>"></span>
+                        <span><img class="event-image" src="${opportunity.image}" alt="Event"></span>
                         <div class="text-block">
                             <div class="title"><%= opportunity.title %></div>
                             <div class="subtitle"><i class="fa-regular fa-calendar">&nbsp;</i><%=opportunity.time %>  &nbsp; 
@@ -30,3 +31,9 @@
         </div>
     </main>
 </div>
+<script type="module">
+    import Search from "/js/search.js";
+
+    const search = new Search();
+    search.setup(); // Run setup manually since no constructor
+</script>

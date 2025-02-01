@@ -667,8 +667,7 @@ h3.acc {
 .opportunity-list {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    padding: 20px;
+    padding: 5px;
 }
 
 .opportunity-card {
@@ -683,14 +682,17 @@ h3.acc {
 
 .opportunity-card.blue {
     border-left: 8px solid #1773DA;
+    margin-bottom: 10px;
 }
 
 .opportunity-card.red {
     border-left: 8px solid #F07167;
+    margin-bottom: 10px;
 }
 
 .opportunity-card.green {
     border-left: 8px solid #00FFB2;
+    margin-bottom: 10px;
 }
 
 .info {
@@ -699,8 +701,8 @@ h3.acc {
 }
 
 .event-image {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 10%;
     margin-right: 16px;
 }
@@ -745,17 +747,21 @@ h3.acc {
     background-color: #1773DA;
 }
 
-.location {
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    font-size: 14px;
+.location{
+    appearance: none;
+    background-color: white;
+    padding: 0 1em 0 0;
+    width: 140px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: inherit;
+    border-color:#c4c3c3;
 }
 
 .search-btn {
     padding: 8px 16px;
     font-size: 16px;
-    background-color: #0A387C;
+    background-color: #1773DA;
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -763,7 +769,6 @@ h3.acc {
     font-weight: bold;
     margin-left: 100px;
 }
-
 /* Sign up / Log in*/
 .sign-container {
     display: flex;

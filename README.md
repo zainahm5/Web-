@@ -1,4 +1,4 @@
-#1.	Overview
+# Overview
    SeasonServe is a web-based platform designed to connect volunteers with seasonal events where interested participants can browse, view details, and sign up for events.
 The website streamlines the process of matching volunteers with events that align with their interests, availability, and location.
    Beyond connecting people with meaningful experiences, the platform helps volunteers gain valuable skills in various fields such as event management, hospitality, education, logistics, and customer service. 

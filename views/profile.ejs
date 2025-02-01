@@ -2,135 +2,125 @@
 <div>
     <main>
         <section id="profile">
-            <div class="title">Edit Profile</div>
-            <form action="#" class="proForm">
+            <div class="title">Profile </div>
+            
+            <form action="/profile/update" method="POST" class="proForm ">
+                <!-- Full Name (Editable) -->
                 <div class="input-box">
-                    <span class="proDetails">Full Name</span>
-                    <input type="text" placeholder="Full Name" required>
+                    <span class="proDetails"><strong>Full Name: </strong></span>
+                    <input type="text" name="firstName" value="<%= user.firstName %>" required>
+                    <input type="text" name="lastName" value="<%= user.lastName %>" required>
                 </div>
+            
+                <!-- Email (Read-Only) -->
                 <div class="input-box">
-                    <span class="proDetails">Email Address</span>
-                    <input type="text" placeholder="example@gmail.com" required>
+                    <span class="proDetails"><strong>Email Address: </strong></span>
+                    <input type="text" value="<%= user.email %>" readonly>
                 </div>
+            
+                <!-- National ID (Read-Only) -->
                 <div class="input-box">
-                    <span class="proDetails">Phone Number</span>
-                    <input type="text" placeholder="+966 xx xxx xxxx" required>
+                    <span class="proDetails"><strong>National ID: </strong></span>
+                    <input type="text" value="<%= user.nationalID %>" readonly>
                 </div>
+            
+                <!-- Gender (Read-Only) -->
                 <div class="input-box">
-                    <span class="proDetails">Birth Date</span>
-                    <input type="date" id="birth-date" required>
+                    <span class="proDetails"><strong>Gender: </strong></span>
+                    <input type="text" value="<%= user.gender %>" readonly>
                 </div>
-
-                <div class="proCol">
-                    <div class="input-box">
-                        <span class="proDetails">My Skills</span>
-                        <div class="skillCol">
-                            <div class="select-box">
-                                <select>
-                                    <option hidden>Skill</option>
-                                    <option>Teamwork</option>
-                                    <option>Communication</option>
-                                    <option>Leadership</option>
-                                    <option>Problem-solving</option>
-                                    <option>Time management</option>
-                                    <option>Creativity</option>
-                                    <option>Organization</option>
-                                    <option>Public speaking</option>
-                                    <option>Event planning</option>
-                                    <option>Fundraising</option>
-                                    <option>Social media management</option>
-                                    <option>First aid & CPR</option>
-                                    <option>Data entry & management</option>
-                                    <option>Graphic design</option>
-                                    <option>Web development</option>
-                                    <option>Marketing & Outreach</option>
-                                    <option>Research & analysis</option>
-                                    <option>Teaching & Tutoring</option>
-                                    <option>Cultural awareness</option>
-                                    <option>Mentorship</option>
-                                    <option>Networking</option>
-                                    <option>Customer service</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <span class="proDetails">Volunteering History</span>
-                        <div class="historyVol">
-                            <h3>Opportunity 1 Title</h3>
-                            <p>Description of opportunity 1.</p>
-                        </div>
-                    </div>
+            
+                <!-- Phone (Read-Only) -->
+                <div class="input-box">
+                    <span class="proDetails"><strong>Phone: </strong></span>
+                    <input type="text" value="<%= user.phone %>" readonly>
                 </div>
-
-                <div class="gender-box">
-                    <span class="gender-title">Gender</span>
-                    <div class="gender-option">
-                        <div class="gender">
-                            <input type="radio" id="check-female" name="gender" checked>
-                            <label for="check">Female</label>
-                        </div>
-                        <div class="gender">
-                            <input type="radio" id="check-male" name="gender">
-                            <label for="check">Male</label>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="profileUpdate">Save Changes</button>
-            </form>
-        </section>
-
-
-
-
-        <!-- <div class="container-fluid container-fluid-custom">
-    <main class="main">
-        <h3 class="acc">You have <span class="volunteer-hours">21</span> Volunteer Hours</h3>
-        <img src="profile-image.jpg" alt="Profile" class="profile-image">
-        <div class="profile-section">
-            <div class="profile-info">
-                <div class="info-item">
-                    <label for="full-name">Full Name:</label>
-                    <input type="text" id="full-name" value="Alexa Rawles">
-                </div>
-                <div class="info-item">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" value="alexa.rawles@gmail.com">
-                </div>
-                <div class="info-item">
-                    <label for="birth-date">Birth Date:</label>
-                    <input type="date" id="birth-date">
-                </div>
-                <div class="info-item">
-                    <label for="gender">Gender:</label>
-                    <select id="gender">
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
+            
+                <!-- Education (Editable, Select Dropdown) -->
+                <div class="input-box">
+                    <span class="proDetails"><strong>Education: </strong></span>
+                    <select name="education">
+                        <option hidden>Select Education Level</option>
+                        <option value="High School" <%= user.education === 'High School' ? 'selected' : '' %>>High School</option>
+                        <option value="Bachelor's Degree" <%= user.education === "Bachelor's Degree" ? 'selected' : '' %>>Bachelor's Degree</option>
+                        <option value="Master's Degree" <%= user.education === "Master's Degree" ? 'selected' : '' %>>Master's Degree</option>
+                        <option value="PhD" <%= user.education === 'PhD' ? 'selected' : '' %>>PhD</option>
                     </select>
                 </div>
-                <div class="info-item">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" value="+966xxxxxxx">
+            
+                <!-- Skills (Multi-Select) -->
+                <div class="input-box">
+                    <span class="proDetails"><strong>Skills: </strong></span>
+                    <select id="skillsSelect">
+                        <option hidden>Choose a Skill</option>
+                        <option>Teamwork</option>
+                        <option>Communication</option>
+                        <option>Leadership</option>
+                        <option>Problem-solving</option>
+                        <option>Time management</option>
+                        <option>Creativity</option>
+                        <option>Organization</option>
+                        <option>Public speaking</option>
+                        <option>Event planning</option>
+                        <option>Fundraising</option>
+                        <option>Social media management</option>
+                        <option>First aid & CPR</option>
+                        <option>Data entry & management</option>
+                        <option>Graphic design</option>
+                        <option>Web development</option>
+                        <option>Marketing & Outreach</option>
+                        <option>Research & analysis</option>
+                        <option>Teaching & Tutoring</option>
+                        <option>Cultural awareness</option>
+                        <option>Mentorship</option>
+                        <option>Networking</option>
+                        <option>Customer service</option>
+                    </select>
+            
+                    <div id="selectedSkills">
+                        <% user.skills.forEach(skill => { %>
+                            <span class="skill-badge"><%= skill %> <button type="button" class="btn" onclick="removeSkill('<%= skill %>')">x</button></span>
+                        <% }) %>
+                    </div>
+                    <input type="hidden" name="skills" id="skillsInput" value="<%= user.skills.join(',') %>">
                 </div>
-            </div>
-        </div>
+            
+                <button type="submit" class="sign-btn" style="margin-left: 34%; width: 300px;">Update Profile</button>
+            </form>
+            
+            <script>
+                const skillsSelect = document.getElementById("skillsSelect");
+                const selectedSkillsDiv = document.getElementById("selectedSkills");
+                const skillsInput = document.getElementById("skillsInput");
+            
+                let skills = skillsInput.value ? skillsInput.value.split(",") : [];
+            
+                skillsSelect.addEventListener("change", function() {
+                    const skill = skillsSelect.value;
+                    if (skill && !skills.includes(skill)) {
+                        skills.push(skill);
+                        updateSkillsDisplay();
+                    }
+                    skillsSelect.value = "";
+                });
+            
+                function removeSkill(skill) {
+                    skills = skills.filter(s => s !== skill);
+                    updateSkillsDisplay();
+                }
+            
+                function updateSkillsDisplay() {
+                    selectedSkillsDiv.innerHTML = skills.map(skill => 
+                        `<span class="skill-badge">${skill} <button type="btn" onclick="removeSkill('${skill}')">x</button></span>`
+                    ).join(" ");
+                    skillsInput.value = skills.join(",");
+                }
+            </script>
+            
+        </section>
+    </main>
 
-        <div class="volunteering-section">
-            <div class="skills-section">
-                <h4>My Skills</h4>
-                <input type="text" placeholder="Add Skill" class="skill-input">
-                <button class="addSkill">+ Add Skills</button>
-            </div>
-            <div class="history-section">
-                <h4>Volunteering History</h4>
-                <div class="opportunity-acc">
-                    <div class="title">Opportunity 1 Title</div>
-                    <div class="description">Description of opportunity 1.</div>
-                </div>
-            </div>
-        </div>
-        <button class="update-acc">Save changes</button>
-</div> -->
+
+
     </main>
 </div>

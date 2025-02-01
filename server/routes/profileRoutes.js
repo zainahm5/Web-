@@ -1,12 +1,10 @@
-routes/profileRoutes.js
+// In profileRoutes.js
 const express = require('express');
 const router = express.Router();
 const profileController = require('../controllers/profileController');
+const { isLoggedIn } = require('../middleware/checkAuth');  // Import the middleware
+const { profile, updateProfile } = require("../controllers/mainController");
 
-// GET request for the profile page
-router.get('/profile', profileController.getProfile);
-
-// POST request to update the profile
-router.post('/profile', profileController.updateProfile);
-
+router.get('/profile', isLoggedIn, profileController.getProfile);
+router.post("/profile/update", isLoggedIn, updateProfile);
 module.exports = router;

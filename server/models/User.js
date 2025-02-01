@@ -40,7 +40,7 @@ const UserSchema = new mongoose.Schema({
   },
   volunteeringExp: {
     type: String,
-    enum: ["yes", "No"],
+    enum: ["yes", "no"],
     required: true,
   },
   skills: {

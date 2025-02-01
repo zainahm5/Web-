@@ -1030,3 +1030,8 @@ details.container {
     transform: translateY(-50%);
     cursor: pointer;
 }
+
+.form-note {
+    color: gray;
+    font-weight: normal;
+}

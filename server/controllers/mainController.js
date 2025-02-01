@@ -3,23 +3,12 @@ exports.homepage = async (req, res) => {
   const locals = {
     title: 'SeasonServe',
     description: 'Volunteering Opportunities Website'
-  };
-  // Check if the user is logged in
-  if (req.isAuthenticated && req.isAuthenticated()) {
-    // User is logged in, render with main layout
-    res.render('index', {
-      locals,
-      layout: '../views/layouts/main'
-    });
-  } else {
-    // User is not logged in, render with front-page layout
+  }
     res.render('index', {
       locals,
       layout: '../views/layouts/front-page'
     });
   }
-};
-
 
 // GET About
 exports.about = async (req, res) => {

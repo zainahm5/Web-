@@ -1,3 +1,4 @@
+
 # Overview
    SeasonServe is a web-based platform designed to connect volunteers with seasonal events where interested participants can browse, view details, and sign up for events.
 The website streamlines the process of matching volunteers with events that align with their interests, availability, and location.
@@ -166,3 +167,14 @@ Figure 16 Database
 [2] https://getbootstrap.com/
 [3] https://fontawesome.com/ 
 [4] https://www.youtube.com/watch?v=GdrbE-s5DgQ&t=38s
+
+
+
+## Team members: 
+Noura Assaf Abuthnain 444006599
+Norah Mohammad Altwiri 444005353
+Felwah Mohammad Almofeez 444006548
+Zainah Mohammed Alnoamani 443010399
+
+
+

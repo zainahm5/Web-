@@ -7,7 +7,7 @@ Whether they are assisting at large-scale entertainment venues, engaging with ch
 
 
 
-#2.	Goals
+# Goals
    
 •	Connect Volunteers: Enable users to find and sign up for volunteer opportunities.
 •	Support Events: Assist organizations in managing and promoting their seasonal events.
@@ -16,7 +16,7 @@ Whether they are assisting at large-scale entertainment venues, engaging with ch
 
 
 
-#3.	Flow Chart
+# Flow Chart
 
    
 Figure 1 SeasonServe Flow Chart
@@ -24,7 +24,7 @@ Figure 1 SeasonServe Flow Chart
 
 
 
-#4.	Setup
+# Setup
 For the project development, we used GitHub for collaboration and VS Code as our code environment.
 We were able to effectively organize our code, monitor changes, and work together as a team through GitHub. 
 Using VS Code provided a flexible and powerful development environment with extensions that helped simplify our workflow.  
@@ -57,7 +57,7 @@ To configure it, we followed these steps:
 
 
 
-#5.	Technologies
+# Technologies
    The project utilizes the following technologies for Frontend:
 •	EJS (Embedded JavaScript): For templating and rendering HTML pages.
 •	JavaScript: The main programming language for server-side logic.
@@ -77,8 +77,8 @@ Our authentication system is fully connected to our MongoDB database, making eve
 
 
 
-#6.	Screenshots
-##6.1.	Website 
+# Screenshots
+## Website 
 
 Figure 2 Interactive screen with great responsiveness
 
@@ -113,7 +113,7 @@ Figure 15 Display and update Profile page (contains read-only and editable)
 
 
 
-##6.2.	Database
+## Database
 
 Figure 16 Database
 
@@ -121,7 +121,7 @@ Figure 16 Database
 
 
 
-##7.	Future Work 
+## Future Work 
    We planned to accomplish the following for our website's future development:
 •	Rewards Page: Highlights users with the highest volunteer hours.
 •	Support System: Offers assistance to users. 
@@ -132,7 +132,7 @@ Figure 16 Database
 
 
 
-##8.	Resources
+## Resources
 [1] https://github.com/RaddyTheBrand/Notes-NodeJs-CRUD-MongoDB.git
 [2] https://getbootstrap.com/
 [3] https://fontawesome.com/ 

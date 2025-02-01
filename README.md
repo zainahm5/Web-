@@ -1,16 +1,22 @@
 1.	Overview
+
+   
 SeasonServe is a web-based platform designed to connect volunteers with seasonal events where interested participants can browse, view details, and sign up for events. The website streamlines the process of matching volunteers with events that align with their interests, availability, and location.
 Beyond connecting people with meaningful experiences, the platform helps volunteers gain valuable skills in various fields such as event management, hospitality, education, logistics, and customer service. Whether they are assisting at large-scale entertainment venues, engaging with children in educational workshops, or working behind the scenes at high-profile events, volunteers can develop practical skills while making a positive impact in their community.
 
 2.	Goals
+   
 •	Connect Volunteers: Enable users to find and sign up for volunteer opportunities.
 •	Support Events: Assist organizations in managing and promoting their seasonal events.
 •	Community Engagement: Foster a sense of community by encouraging participation in local activities.
 
 3.	Flow Chart
+
+   
 Figure 1 SeasonServe Flow Chart
 
 4.	Setup
+
 For the project development, we used GitHub for collaboration and VS Code as our code environment. We were able to effectively organize our code, monitor changes, and work together as a team through GitHub. Using VS Code provided a flexible and powerful development environment with extensions that helped simplify our workflow.  
 
 For the backend of our website, we used Node.js and MongoDB, to guarantee a scalable and efficient system. The development process involved several steps:
@@ -33,7 +39,9 @@ o	app.js: The main entry point for the application.
 o	package.json: Metadata for the Node.js project, including dependencies.
 
 
+
 5.	Technologies
+   
 The project utilizes the following technologies for Frontend:
 •	EJS (Embedded JavaScript): For templating and rendering HTML pages.
 •	JavaScript: The main programming language for server-side logic.
@@ -47,7 +55,9 @@ Backend Technologies:
 Authentication Implementation:
 For this project, we set up our own authentication system using Passport.js instead of relying on third-party services. We used local authentication, so users can sign up and log in with their email and password. This meant handling things like checking if an account already exists, securely storing passwords, and keeping users logged in with sessions. We also made sure to include custom error handling, so users get clear messages if something goes wrong, like using a weak password or trying to register with an email that’s already taken. Our authentication system is fully connected to our MongoDB database, making everything run smoothly while keeping user data secure. Doing this ourselves gave us full control over how authentication works, making sure it fits exactly with what we needed for this project.
 
+
 6.	Screenshots
+   
 6.1.	Website 
 
 Figure 2 Interactive screen with great responsiveness
@@ -85,7 +95,11 @@ Figure 15 Display and update Profile page (contains read-only and editable)
 
 Figure 16 Database
 
+
 7.	Future Work
+
+   
+   
 We planned to accomplish the following for our website's future development:
 •	Rewards Page: Highlights users with the highest volunteer hours.
 •	Support System: Offers assistance to users. 

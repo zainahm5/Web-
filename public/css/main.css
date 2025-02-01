@@ -438,6 +438,52 @@ section#profile {
     background: var(--second-color);
 }
 
+/* 404 */
+.error-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container h1 {
+    font-size: 80px;
+    margin: 0;
+    color: var(--fourth-color);
+}
+
+.error-container p {
+    font-size: 20px;
+    margin-top: 5px;
+    color: var(--text-color);
+}
+
+.goBack_btn {
+    background-color: var(--fourth-color);
+    color: #fff;
+    padding: 8px 17px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.goBack_btn:hover {
+    color: var(--fourth-color);
+    transform: scale(1.05);
+}
+
 
 /* .main {
     width: 80%;
@@ -601,7 +647,7 @@ h3.acc {
 .opportunity-list {
     display: flex;
     flex-direction: column;
-    gap:1px;
+    gap: 1px;
     padding: 20px;
 }
 
@@ -679,13 +725,14 @@ h3.acc {
     background-color: #1773DA;
 }
 
-.location{
+.location {
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 10px;
     font-size: 14px;
 }
-.search-btn{
+
+.search-btn {
     padding: 8px 16px;
     font-size: 16px;
     background-color: #0A387C;
@@ -696,6 +743,7 @@ h3.acc {
     font-weight: bold;
     margin-left: 100px;
 }
+
 /* Sign up / Log in*/
 .sign-container {
     display: flex;
@@ -833,15 +881,16 @@ details.container {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .details-event-image {
+.details-event-image {
     width: 50%;
     height: auto;
     margin-bottom: 20px;
     margin-top: 30px;
-  }
-  .details-btn {
+}
+
+.details-btn {
     padding: 8px 16px;
     font-size: 16px;
     background-color: rgb(222, 219, 219);
@@ -859,6 +908,7 @@ details.container {
     background-color: #00FFB2;
     color: #263238;
 }
+
 .details-info {
     font-size: 15px;
     color: #666;

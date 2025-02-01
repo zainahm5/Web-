@@ -44,11 +44,6 @@ app.set('view engine', 'ejs');
 app.use('/', require('./server/routes/index'));
 //app.use('/events', require('./server/routes/events'));
 
-
-app.listen(port, () => {
-    console.log(`App listening on port ${port}`);
-});
-
 // Use the profile routes
 //app.use('/', profileRoutes);
 // Middleware
@@ -72,4 +67,13 @@ app.get('/event/:id', async (req, res) => {
     console.error(err);
     res.status(500).send("Error retrieving event");
   }
+});
+
+// Handle 404
+app.get('*', function(req, res) {
+  res.status(404).render('404');
+})
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
 });

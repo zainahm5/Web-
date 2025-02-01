@@ -4,11 +4,12 @@
         <h2>Opportunities</h2>
         <div class="search-bar">
             <input type="text" placeholder="Event title or keyword" class="search-input">
-            <select class="location" id="location">Location
+            <i class="fa-solid fa-location-dot" style="color: #1773DA;">&nbsp;</i>
+             <select class="location" id="location">Location
+                <option value="All">All</option>
                 <option value="Riyadh">Riyadh</option>
                 <option value="Jeddah">Jeddah</option>
                 <option value="Dammam">Dammam</option>
-                <option value="Hail">Hail</option>
             </select>
             <button class="search-btn">Search</button>
         </div>
@@ -30,3 +31,74 @@
         </div>
     </main>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.querySelector(".search-input");
+        const locationFilter = document.querySelector("#location");
+        const searchButton = document.querySelector(".search-btn");
+        const opportunityList = document.querySelector(".opportunity-list");
+    
+        function fetchEvents(query, location) {
+            fetch(`/search-events?query=${query}&location=${location}`)
+                .then(response => response.json())
+                .then(data => {
+                    opportunityList.innerHTML = ""; // Clear previous results
+    
+                    if (data.length === 0) {
+                        opportunityList.innerHTML = "<p>No events found.</p>";
+                        return;
+                    }
+    
+                    data.forEach(opportunity => {
+                        const eventCard = `
+                            <div class="opportunity-card red">
+                                <div class="info">
+                                    <span><img class="event-image" src="${opportunity.image}" alt="Event"></span>
+                                    <div class="text-block">
+                                        <div class="title">${opportunity.title}</div>
+                                        <div class="subtitle">
+                                            <i class="fa-regular fa-calendar">&nbsp;</i>${opportunity.time} &nbsp; 
+                                            <i class="fa-solid fa-location-dot"></i>&nbsp;${opportunity.location}
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/event/${opportunity._id}" class="btn">View Details</a>
+                            </div><br>
+                        `;
+                        opportunityList.innerHTML += eventCard;
+                    });
+                })
+                .catch(error => console.error("Error fetching events:", error));
+        }
+    
+        // Fetch events on search button click
+        searchButton.addEventListener("click", function () {
+            const query = searchInput.value.trim();
+            const location = locationFilter.value;
+            fetchEvents(query, location);
+        });
+    
+        // Fetch events when user presses Enter
+        searchInput.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                searchButton.click();
+            }
+        });
+    
+        // Show all events when input is cleared
+        searchInput.addEventListener("input", function () {
+            if (searchInput.value.trim() === "") {
+                fetchEvents("", locationFilter.value);
+            }
+        });
+    
+        // Show filtered results when location dropdown changes
+        locationFilter.addEventListener("change", function () {
+            fetchEvents(searchInput.value.trim(), locationFilter.value);
+        });
+    
+        // Load all events initially
+        fetchEvents("", "All");
+    });
+    </script>
+    

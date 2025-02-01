@@ -42,6 +42,7 @@ app.set('view engine', 'ejs');
 
 // Routes
 app.use('/', require('./server/routes/index'));
+app.use('/', require('./server/routes/dashboard'));
 //app.use('/events', require('./server/routes/events'));
 
 // Use the profile routes

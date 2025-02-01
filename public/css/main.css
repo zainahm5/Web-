@@ -484,6 +484,26 @@ section#profile {
     transform: scale(1.05);
 }
 
+/* DASHBOARD */
+section#dash {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+#dash h1 {
+    font-size: 40px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    margin-bottom: 80px;
+}
+
+#dash .dashBtn {
+    text-align: center;
+}
 
 /* .main {
     width: 80%;

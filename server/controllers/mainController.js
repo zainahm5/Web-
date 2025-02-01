@@ -4,11 +4,11 @@ exports.homepage = async (req, res) => {
     title: 'SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-    res.render('index', {
-      locals,
-      layout: '../views/layouts/front-page'
-    });
-  }
+  res.render('index', {
+    locals,
+    layout: '../views/layouts/front-page'
+  });
+}
 
 // GET About
 exports.about = async (req, res) => {
@@ -16,7 +16,10 @@ exports.about = async (req, res) => {
     title: 'About - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('about', locals);
+  res.render('about', {
+    locals,
+    layout: '../views/layouts/front-page'
+  });
 }
 
 // GET Events
@@ -25,7 +28,10 @@ exports.events = async (req, res) => {
     title: 'Events - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('events', locals);
+  res.render('events', {
+    locals,
+    layout: '../views/layouts/main'
+  });
 }
 
 // GET Details
@@ -43,7 +49,10 @@ exports.profile = async (req, res) => {
     title: 'Profile - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('profile', locals);
+  res.render('profile', {
+    locals,
+    layout: '../views/layouts/main'
+  });
 }
 
 // GET Sign In
@@ -52,8 +61,8 @@ exports.signin = async (req, res) => {
     title: 'Sign In - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
-  res.render('signin', { 
-    locals, 
+  res.render('signin', {
+    locals,
     layout: '../views/layouts/sign',
     error: null  // `error` is always defined
   });

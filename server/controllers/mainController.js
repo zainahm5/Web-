@@ -77,15 +77,6 @@ exports.signup = async (req, res) => {
   res.render('signup', { locals, layout: '../views/layouts/sign', error: null });
 };
 
-// GET Logout
-exports.logout = async (req, res) => {
-  const locals = {
-    title: 'Logout - SeasonServe',
-    description: 'Volunteering Opportunities Website'
-  }
-  res.render('logout', locals);
-}
-
 const Events = require('../models/Events');
 const mongoose = require('mongoose');
 

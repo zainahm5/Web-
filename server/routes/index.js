@@ -17,7 +17,6 @@ router.get('/details', mainController.details);
 router.get('/profile', mainController.profile);
 router.get('/signin', mainController.signin);
 router.get('/signup', mainController.signup);
-router.get('/logout', mainController.logout);
 router.get('/', mainController.events); 
 router.get("/search-events", async (req, res) => {
     try {

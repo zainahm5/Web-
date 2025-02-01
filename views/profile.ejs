@@ -3,7 +3,7 @@
     <main>
         <section id="profile">
             <div class="title">Profile </div>
-            
+
             <form action="/profile/update" method="POST" class="proForm ">
                 <!-- Full Name (Editable) -->
                 <div class="input-box">
@@ -111,7 +111,7 @@
             
                 function updateSkillsDisplay() {
                     selectedSkillsDiv.innerHTML = skills.map(skill => 
-                        `<span class="skill-badge">${skill} <button type="btn" onclick="removeSkill('${skill}')">x</button></span>`
+                        `<span class="skill-badge">${skill} <button type="button" class="btn" onclick="removeSkill('${skill}')">x</button></span>`
                     ).join(" ");
                     skillsInput.value = skills.join(",");
                 }

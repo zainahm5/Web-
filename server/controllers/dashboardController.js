@@ -5,7 +5,10 @@ exports.dashboard = async (req, res) => {
       description: 'Volunteering Opportunities Website'
     }
     try {
-      const user = req.user; // Assuming user is stored in `req.user`
+      const user = req.user; 
+      if (!req.user) {
+        return res.status(401).send("Access Denied");
+      }
       
       res.render("dashboard", { user });
     } catch (err) {

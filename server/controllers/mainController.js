@@ -49,11 +49,44 @@ exports.profile = async (req, res) => {
     title: 'Profile - SeasonServe',
     description: 'Volunteering Opportunities Website'
   }
+  if (!req.user) {
+    return res.status(401).send("Access Denied");
+  }
   res.render('profile', {
     locals,
+    user: req.user,
     layout: '../views/layouts/main'
   });
 }
+const User = require("../models/User");
+exports.updateProfile = async (req, res) => {
+  try {
+    console.log("Received update data:", req.body);
+
+    const { firstName, lastName, education, volunteeringExp, skills } = req.body;
+
+    // Convert skills from comma-separated string to array
+    const skillsArray = skills ? skills.split(",") : [];
+
+    const updatedUser = await User.findByIdAndUpdate(
+      req.user._id,
+      { firstName, lastName, education, volunteeringExp, skills: skillsArray },
+      { new: true }
+    );
+
+    if (!updatedUser) {
+      console.log("User not found");
+      return res.status(404).send("User not found");
+    }
+
+    console.log("Updated user:", updatedUser);
+    res.redirect("/profile");
+  } catch (err) {
+    console.error("Error updating profile:", err);
+    res.status(500).send("Error updating profile");
+  }
+};
+
 
 // GET Sign In
 exports.signin = async (req, res) => {
@@ -106,4 +139,3 @@ exports.events = async (req, res) => {
     res.status(500).send("Error fetching events");
   }
 };
-

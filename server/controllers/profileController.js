@@ -1,15 +1,35 @@
-// controllers/profileController.js
-exports.getProfile = (req, res) => {
-    // Fetch user data from a database or service
-       const userProfile  = require('./models/User');
-    const mongoose = require('mongoose');
+const User = require('../models/User');
 
-    res.render('profile', { profile: userProfile });
+// Fetch profile data
+// In profileController.js
+exports.getProfile = async (req, res) => {
+    try {
+      if (!req.user) {
+        return res.status(401).send("User not logged in");
+      }
+  
+      // Ensure user data is passed to the view
+      const user = req.user;
+      res.render("profile", { user });
+    } catch (error) {
+      console.error("Error:", error);
+      res.status(500).send("Server error");
+    }
+  };
+  
+
+// Update profile data
+exports.updateProfile = async (req, res) => {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.user.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+    res.json(updatedUser);  // Respond with updated user data
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error');
+  }
 };
 
-exports.updateProfile = (req, res) => {
-    // Logic to update user profile
-    const updatedData = req.body;
-    // Save updated data to the database
-    res.redirect('/profile'); // Redirect to the profile page after update
-};

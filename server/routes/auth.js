@@ -3,12 +3,12 @@ const passport = require("passport");
 const User = require("../models/User");
 const router = express.Router();
 
-// Sign Up (Create an Account) Route
+// Signup (create an account)
 router.post("/signup", async (req, res) => {
   try {
     console.log("Received form data:", req.body);
 
-    // Convert arrays to single values
+    // Convert arrays to single values (Fix for duplicated form fields)
     const userData = {
       email: Array.isArray(req.body.email) ? req.body.email[0] : req.body.email,
       firstName: Array.isArray(req.body.firstName) ? req.body.firstName[0] : req.body.firstName,
@@ -24,18 +24,34 @@ router.post("/signup", async (req, res) => {
 
     console.log("Processed user data:", userData);
 
-    // Check if email already exists
-    const existingUser = await User.findOne({ email: userData.email.trim().toLowerCase() });
+    // Check if email, phone, or national ID already exists
+    const existingUser = await User.findOne({
+      $or: [
+        { email: userData.email.trim().toLowerCase() },
+        { phone: userData.phone },
+        { nationalID: userData.nationalID }
+      ]
+    });
+
     if (existingUser) {
-      console.log("Signup failed: Email already registered");
+      let errorMsg = "";
+      if (existingUser.email === userData.email.trim().toLowerCase()) {
+        errorMsg = "The email you entered is already registered.";
+      } else if (existingUser.phone === userData.phone) {
+        errorMsg = "The phone number is already registered.";
+      } else if (existingUser.nationalID === userData.nationalID) {
+        errorMsg = "The National ID is already registered.";
+      }
+
+      console.log("Signup failed:", errorMsg);
       return res.render("signup", { 
-        error: "The email you entered is already registered.", 
+        error: errorMsg, 
         locals: {
-            title: 'Sign Up - SeasonServe',
-            description: 'Create an account for volunteering'
+          title: 'Sign Up - SeasonServe',
+          description: 'Create an account for volunteering'
         },
         layout: '../views/layouts/sign'
-    });    
+      });
     }
 
     // Create and save new user
@@ -50,7 +66,35 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-// Sign In (Login) Route
+// Check if email already exists (Step 1)
+router.get("/check-email", async (req, res) => {
+  const email = req.query.email.trim().toLowerCase();
+  const existingUser = await User.findOne({ email });
+
+  return res.json({ exists: !!existingUser });
+});
+
+// Check if phone already exists (Step 2)
+router.get("/check-phone", async (req, res) => {
+  const phone = req.query.phone.trim();
+  const existingUser = await User.findOne({ phone });
+
+  return res.json({ exists: !!existingUser });
+});
+
+// Check if national ID already exists (Step 2) - Now only checked on form submission
+router.get("/check-nationalid", async (req, res) => {
+  if (!req.query.nationalID) {
+    return res.json({ exists: false });
+  }
+
+  const nationalID = req.query.nationalID.trim();
+  const existingUser = await User.findOne({ nationalID });
+
+  return res.json({ exists: !!existingUser });
+});
+
+// Signin (login)
 router.post("/signin", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) {
@@ -75,20 +119,9 @@ router.post("/signin", (req, res, next) => {
         return next(err);
       }
       console.log("User logged in successfully:", user);
-      return res.redirect("/");  
+      return res.redirect("/dashboard");  
     });
   })(req, res, next);
-});
-
-// Check if email already exists (for Step 1 validation)
-router.get("/check-email", async (req, res) => {
-  const email = req.query.email.trim().toLowerCase();
-  const existingUser = await User.findOne({ email });
-
-  if (existingUser) {
-      return res.json({ exists: true });
-  }
-  return res.json({ exists: false });
 });
 
 module.exports = router;

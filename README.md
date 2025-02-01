@@ -134,14 +134,15 @@ Figure 15 Display and update Profile page (contains read-only and editable)
 ![Image](https://github.com/user-attachments/assets/932f20b1-6627-4868-ad61-addc180de26a)
 ![Image](https://github.com/user-attachments/assets/2030d3c2-8cdf-4f40-bf3e-e6f199d39e7b)
 ![Image](https://github.com/user-attachments/assets/c3ff5edd-1562-4225-9aff-b6ff11613382)
-![Image](https://github.com/user-attachments/assets/063e050b-6042-4e9b-bbe9-cea5a8ff7a20)
-![Image](https://github.com/user-attachments/assets/dc34dfea-645b-4507-9869-b00a9edc4b40)
-![Image](https://github.com/user-attachments/assets/62aafea1-173f-42bd-afa4-6c436b488c7e)
-![Image](https://github.com/user-attachments/assets/974a7939-a52e-4250-b292-446addad0822)
+
 
 
 ## Database
 
+![Image](https://github.com/user-attachments/assets/dc34dfea-645b-4507-9869-b00a9edc4b40)
+![Image](https://github.com/user-attachments/assets/62aafea1-173f-42bd-afa4-6c436b488c7e)
+![Image](https://github.com/user-attachments/assets/974a7939-a52e-4250-b292-446addad0822)
+![Image](https://github.com/user-attachments/assets/063e050b-6042-4e9b-bbe9-cea5a8ff7a20)
 Figure 16 Database
 
 

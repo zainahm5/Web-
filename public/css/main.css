@@ -647,8 +647,7 @@ h3.acc {
 .opportunity-list {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    padding: 20px;
+    padding: 5px;
 }
 
 .opportunity-card {
@@ -663,14 +662,17 @@ h3.acc {
 
 .opportunity-card.blue {
     border-left: 8px solid #1773DA;
+    margin-bottom: 10px;
 }
 
 .opportunity-card.red {
     border-left: 8px solid #F07167;
+    margin-bottom: 10px;
 }
 
 .opportunity-card.green {
     border-left: 8px solid #00FFB2;
+    margin-bottom: 10px;
 }
 
 .info {
@@ -679,8 +681,8 @@ h3.acc {
 }
 
 .event-image {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 10%;
     margin-right: 16px;
 }

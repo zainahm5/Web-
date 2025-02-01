@@ -17,8 +17,7 @@ Whether they are assisting at large-scale entertainment venues, engaging with ch
 
 
 # Flow Chart
-
-   
+![Image](https://github.com/user-attachments/assets/f75dd1d4-a82b-49a0-86d5-9493a3b2afda)
 Figure 1 SeasonServe Flow Chart
 
 

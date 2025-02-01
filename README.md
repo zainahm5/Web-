@@ -1,8 +1,10 @@
 1.	Overview
 
    
-SeasonServe is a web-based platform designed to connect volunteers with seasonal events where interested participants can browse, view details, and sign up for events. The website streamlines the process of matching volunteers with events that align with their interests, availability, and location.
-Beyond connecting people with meaningful experiences, the platform helps volunteers gain valuable skills in various fields such as event management, hospitality, education, logistics, and customer service. Whether they are assisting at large-scale entertainment venues, engaging with children in educational workshops, or working behind the scenes at high-profile events, volunteers can develop practical skills while making a positive impact in their community.
+SeasonServe is a web-based platform designed to connect volunteers with seasonal events where interested participants can browse, view details, and sign up for events.
+The website streamlines the process of matching volunteers with events that align with their interests, availability, and location.
+Beyond connecting people with meaningful experiences, the platform helps volunteers gain valuable skills in various fields such as event management, hospitality, education, logistics, and customer service. 
+Whether they are assisting at large-scale entertainment venues, engaging with children in educational workshops, or working behind the scenes at high-profile events, volunteers can develop practical skills while making a positive impact in their community.
 
 
 
@@ -35,7 +37,8 @@ Figure 1 SeasonServe Flow Chart
 
 4.	Setup
 
-For the project development, we used GitHub for collaboration and VS Code as our code environment. We were able to effectively organize our code, monitor changes, and work together as a team through GitHub. 
+For the project development, we used GitHub for collaboration and VS Code as our code environment.
+We were able to effectively organize our code, monitor changes, and work together as a team through GitHub. 
 Using VS Code provided a flexible and powerful development environment with extensions that helped simplify our workflow.  
 
 For the backend of our website, we used Node.js and MongoDB, to guarantee a scalable and efficient system.
